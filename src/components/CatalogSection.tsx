@@ -57,7 +57,7 @@ export default function CatalogSection({ initialProducts }: { initialProducts: P
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
-              placeholder="Search 10 items..."
+              placeholder="Search products or categories..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-hidden focus:border-teal-500 bg-slate-50/50"
@@ -94,13 +94,13 @@ export default function CatalogSection({ initialProducts }: { initialProducts: P
         </div>
       )}
 
-      {/* 10 Sample Data Count Indicator */}
+      {/* Product Count Indicator */}
       <div className="flex items-center justify-between text-xs text-slate-400 pt-4 px-1">
-        <span className="flex items-center gap-1.5">
+        <span className="flex items-center gap-1.5 font-medium text-slate-500">
           <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-          Displaying {filteredProducts.length} of {initialProducts.length} curated sample items
+          Showing {filteredProducts.length} of {initialProducts.length} products
         </span>
-        <span>Rendered via SSR Server Component</span>
+        <span className="text-[11px] text-slate-400 font-medium">⚡ Server-Side Rendered (SSR) Catalog</span>
       </div>
     </div>
   );

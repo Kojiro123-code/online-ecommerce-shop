@@ -43,10 +43,10 @@ export default function Navbar() {
               Catalog
             </Link>
             <Link
-              href="/#sample-data"
+              href="/#catalog"
               className="hidden md:inline-block text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors px-3 py-2 rounded-lg hover:bg-slate-50"
             >
-              10 Sample Items
+              Collections
             </Link>
 
             {/* Cart Link with Badge */}

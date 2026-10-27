@@ -82,3 +82,4 @@ export default function ProductImage({
     </div>
   );
 }
+

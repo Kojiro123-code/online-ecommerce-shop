@@ -7,14 +7,18 @@ import { Star, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group relative flex flex-col rounded-[2rem] bg-zinc-900/60 backdrop-blur-md border border-white/10 hover:border-amber-400/50 shadow-lg hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_25px_rgba(245,158,11,0.08)] hover:-translate-y-1.5 transition-all duration-500 overflow-hidden">
+    <div className="group relative flex flex-col h-full rounded-[2rem] bg-zinc-900/60 backdrop-blur-md border border-white/10 hover:border-amber-400/50 shadow-lg hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_25px_rgba(245,158,11,0.08)] hover:-translate-y-1.5 transition-all duration-500 overflow-hidden">
       {/* Product Image & Link */}
-      <Link href={`/products/${product.id}`} className="relative aspect-4/3 overflow-hidden bg-zinc-950 block">
+      <Link
+        href={`/products/${product.id}`}
+        className="relative w-full aspect-4/3 overflow-hidden bg-zinc-950 block shrink-0"
+      >
         <ProductImage
           src={product.image}
           fallbackSrc={product.fallbackImage}
           alt={product.name}
           category={product.category}
+          containerClassName="w-full h-full absolute inset-0 overflow-hidden bg-zinc-950"
           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
         />
         
@@ -57,18 +61,21 @@ export default function ProductCard({ product }: { product: Product }) {
           </span>
         </div>
 
-        {/* Title & Tagline */}
+        {/* Title & Description */}
         <Link href={`/products/${product.id}`} className="group-hover:text-amber-300 transition-colors">
-          <h3 className="font-bold text-white line-clamp-1 text-lg tracking-tight">
+          <h3 className="font-bold text-white line-clamp-1 text-lg tracking-tight" title={product.name}>
             {product.name}
           </h3>
         </Link>
-        <p className="text-xs text-zinc-400 line-clamp-2 mt-1.5 mb-5 flex-1 font-light leading-relaxed">
-          {product.tagline}
+        <p
+          className="text-xs text-zinc-400 line-clamp-2 mt-1.5 mb-5 h-10 font-light leading-relaxed overflow-hidden"
+          title={product.description || product.tagline}
+        >
+          {product.description || product.tagline}
         </p>
 
         {/* Price & Actions */}
-        <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+        <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3 mt-auto">
           <div>
             <div className="flex items-baseline gap-2">
               <span className="text-xl font-bold font-mono text-white tracking-tight">

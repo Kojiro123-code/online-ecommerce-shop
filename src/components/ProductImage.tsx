@@ -63,14 +63,14 @@ export default function ProductImage({
 
   if (hasError) {
     return (
-      <div className={`w-full h-full min-h-[160px] bg-gradient-to-br from-slate-100 to-slate-200 flex flex-col items-center justify-center p-4 text-center ${className}`}>
-        <div className="p-3 bg-white/80 rounded-2xl shadow-xs mb-2 backdrop-blur-xs">
+      <div className={`w-full h-full min-h-[160px] bg-zinc-900 border border-white/10 flex flex-col items-center justify-center p-4 text-center ${className}`}>
+        <div className="p-3 bg-zinc-800/80 rounded-2xl shadow-xs mb-2 backdrop-blur-xs border border-white/10">
           {getCategoryIcon(category)}
         </div>
-        <span className="text-xs font-semibold text-slate-700 line-clamp-1 max-w-[80%]">
+        <span className="text-xs font-semibold text-zinc-200 line-clamp-1 max-w-[80%]">
           {alt}
         </span>
-        <span className="text-[10px] text-slate-400 mt-0.5 uppercase tracking-wider font-medium">
+        <span className="text-[10px] text-amber-400 mt-0.5 uppercase tracking-wider font-medium">
           {category || 'Product'}
         </span>
       </div>
@@ -78,7 +78,7 @@ export default function ProductImage({
   }
 
   return (
-    <div className={`relative w-full h-full flex items-center justify-center ${containerClassName !== undefined ? containerClassName : 'overflow-hidden bg-zinc-950'}`}>
+    <div className={`w-full h-full flex items-center justify-center ${containerClassName !== undefined ? containerClassName : 'relative overflow-hidden bg-zinc-950'}`}>
       {/* Skeleton while loading */}
       {!isLoaded && !containerClassName?.includes('bg-transparent') && (
         <div className="absolute inset-0 bg-zinc-800 animate-pulse" />

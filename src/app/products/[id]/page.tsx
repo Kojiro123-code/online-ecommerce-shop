@@ -58,12 +58,13 @@ export default function ProductDetailPage({ params }: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         {/* Product Image Gallery Column */}
         <div className="lg:col-span-6 space-y-5">
-          <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/15 shadow-2xl group">
+          <div className="relative aspect-4/3 w-full rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/15 shadow-2xl group">
             <ProductImage
               src={product.image}
               fallbackSrc={product.fallbackImage}
               alt={product.name}
               category={product.category}
+              containerClassName="w-full h-full absolute inset-0 overflow-hidden bg-zinc-950"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             

@@ -19,10 +19,10 @@ export const dynamic = 'force-dynamic';
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductById(params.id);
   if (!product) {
-    return { title: 'Product Not Found | AURA Store' };
+    return { title: 'Piece Not Found | Online Luxury Atelier' };
   }
   return {
-    title: `${product.name} | AURA Store (SSR)`,
+    title: `${product.name} | Online Luxury Atelier`,
     description: product.description,
   };
 }
@@ -39,140 +39,151 @@ export default function ProductDetailPage({ params }: Props) {
   return (
     <div className="space-y-12">
       {/* Breadcrumb Navigation */}
-      <nav className="flex items-center gap-2 text-xs text-slate-500">
-        <Link href="/" className="hover:text-teal-600 transition-colors flex items-center gap-1">
+      <nav className="flex items-center gap-2 text-xs text-zinc-500 uppercase tracking-widest text-[10px] font-bold">
+        <Link href="/" className="hover:text-amber-400 transition-colors flex items-center gap-1">
           <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Home</span>
+          <span>Archive</span>
         </Link>
         <span>/</span>
-        <Link href="/" className="hover:text-teal-600 transition-colors">
-          Catalog
+        <Link href="/#catalog" className="hover:text-amber-400 transition-colors">
+          Permanent Collection
         </Link>
         <span>/</span>
-        <span className="text-slate-400">{product.category}</span>
+        <span className="text-zinc-400">{product.category}</span>
         <span>/</span>
-        <span className="font-semibold text-slate-800 truncate max-w-xs">{product.name}</span>
+        <span className="text-white truncate max-w-xs">{product.name}</span>
       </nav>
 
       {/* Main Detail Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         {/* Product Image Gallery Column */}
-        <div className="lg:col-span-6 space-y-4">
-          <div className="relative aspect-4/3 rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-sm group">
+        <div className="lg:col-span-6 space-y-5">
+          <div className="relative aspect-4/3 rounded-[2.5rem] overflow-hidden bg-zinc-950 border border-white/15 shadow-2xl group">
             <ProductImage
               src={product.image}
               fallbackSrc={product.fallbackImage}
               alt={product.name}
               category={product.category}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            <div className="absolute top-4 left-4 flex gap-2">
-              <span className="px-3 py-1 text-xs font-bold rounded-full bg-slate-900/80 backdrop-blur-md text-white">
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none" />
+
+            <div className="absolute top-5 left-5 flex gap-2">
+              <span className="px-3.5 py-1 text-[10px] font-bold tracking-[0.25em] uppercase rounded-full bg-black/70 backdrop-blur-md text-zinc-200 border border-white/15">
                 {product.category}
               </span>
               {product.originalPrice && (
-                <span className="px-3 py-1 text-xs font-bold rounded-full bg-rose-500 text-white shadow-xs">
+                <span className="px-3 py-1 text-[10px] font-extrabold uppercase rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black shadow-xs">
                   SAVE ${(product.originalPrice - product.price).toFixed(0)}
                 </span>
               )}
+            </div>
+
+            <div className="absolute bottom-4 right-4 px-3 py-1 rounded-lg bg-black/70 backdrop-blur-md text-[10px] font-mono text-zinc-400 border border-white/10">
+              SERIAL: REF.{product.id.toUpperCase()}
             </div>
           </div>
 
           {/* Value Props Strip */}
           <div className="grid grid-cols-3 gap-3 pt-2">
-            <div className="bg-white p-3 rounded-xl border border-slate-200/70 text-center text-xs">
-              <Truck className="w-4 h-4 mx-auto text-teal-600 mb-1" />
-              <span className="font-semibold text-slate-800 block">Fast Shipping</span>
-              <span className="text-[10px] text-slate-400">2-3 day transit</span>
+            <div className="bg-zinc-900/50 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center text-xs">
+              <Truck className="w-5 h-5 mx-auto text-amber-400 mb-1.5" />
+              <span className="font-serif font-bold text-white block">White-Glove</span>
+              <span className="text-[10px] text-zinc-400 font-light">Complimentary courier</span>
             </div>
-            <div className="bg-white p-3 rounded-xl border border-slate-200/70 text-center text-xs">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 mx-auto mb-1" />
-              <span className="font-semibold text-slate-800 block">2-Yr Warranty</span>
-              <span className="text-[10px] text-slate-400">Direct support</span>
+            <div className="bg-zinc-900/50 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center text-xs">
+              <ShieldCheck className="w-5 h-5 text-emerald-400 mx-auto mb-1.5" />
+              <span className="font-serif font-bold text-white block">3-Yr Warranty</span>
+              <span className="text-[10px] text-zinc-400 font-light">Maison certification</span>
             </div>
-            <div className="bg-white p-3 rounded-xl border border-slate-200/70 text-center text-xs">
-              <RotateCcw className="w-4 h-4 text-blue-600 mx-auto mb-1" />
-              <span className="font-semibold text-slate-800 block">30-Day Return</span>
-              <span className="text-[10px] text-slate-400">Hassle-free refund</span>
+            <div className="bg-zinc-900/50 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center text-xs">
+              <Sparkles className="w-5 h-5 text-amber-300 mx-auto mb-1.5" />
+              <span className="font-serif font-bold text-white block">HTML Deed</span>
+              <span className="text-[10px] text-zinc-400 font-light">Instant verified receipt</span>
             </div>
           </div>
         </div>
 
         {/* Product Details & Purchase Column */}
         <div className="lg:col-span-6 space-y-6">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-semibold text-teal-600 uppercase tracking-wider">
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 text-[10px] font-bold text-amber-400 uppercase tracking-[0.25em]">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>{product.category} Series • Item #{product.id}</span>
+              <span>ATELIER EDITION • PIECE #{product.id.toUpperCase()}</span>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
               {product.name}
             </h1>
 
-            <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
+            <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-light">
               {product.tagline}
             </p>
 
             {/* Rating & Stock */}
-            <div className="flex items-center gap-4 pt-2">
-              <div className="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-xl">
+            <div className="flex items-center gap-4 pt-1">
+              <div className="flex items-center gap-2 bg-zinc-900/80 border border-white/10 px-3.5 py-1.5 rounded-xl">
                 <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                <span className="font-bold text-sm text-slate-800">{product.rating}</span>
-                <span className="text-xs text-slate-500">({product.reviewCount} customer reviews)</span>
+                <span className="font-bold text-sm text-white font-mono">{product.rating}</span>
+                <span className="text-xs text-zinc-400 font-light">({product.reviewCount} client evaluations)</span>
               </div>
 
               <span
-                className={`text-xs font-semibold px-3 py-1 rounded-xl border ${
+                className={`text-xs font-semibold px-3.5 py-1.5 rounded-xl border flex items-center gap-1.5 ${
                   product.inStock
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-rose-50 text-rose-700 border-rose-200'
+                    ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                    : 'bg-rose-500/10 text-rose-400 border-rose-500/30'
                 }`}
               >
-                {product.inStock ? `In Stock (${product.stockCount} units left)` : 'Out of Stock'}
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                {product.inStock ? `${product.stockCount} Pieces Available` : 'Archived / Out of Stock'}
               </span>
             </div>
           </div>
 
           {/* Pricing Box */}
-          <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-baseline gap-3">
-            <span className="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          <div className="p-5 rounded-3xl bg-zinc-900/60 backdrop-blur-md border border-white/10 shadow-xl flex items-baseline gap-4">
+            <span className="text-3xl sm:text-4xl font-bold font-mono text-white">
               ${product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
-              <span className="text-base text-slate-400 line-through">
+              <span className="text-base text-zinc-500 line-through font-mono">
                 ${product.originalPrice.toFixed(2)}
               </span>
             )}
-            <span className="text-xs text-slate-500 ml-auto font-medium">
-              Taxes calculated at checkout
+            <span className="text-xs text-zinc-400 ml-auto font-light">
+              Taxes calculated at acquisition
             </span>
           </div>
 
           {/* Add to Cart Section */}
-          <div className="p-5 rounded-2xl bg-teal-50/50 border border-teal-100/80 space-y-4">
-            <div className="flex items-center justify-between text-xs text-slate-600 font-medium">
-              <span>Select Quantity & Add to Cart</span>
-              <span>Fast SSR Cart Sync</span>
+          <div className="p-6 rounded-3xl bg-zinc-900/80 backdrop-blur-md border border-amber-400/30 space-y-4 shadow-[0_0_30px_rgba(245,158,11,0.06)]">
+            <div className="flex items-center justify-between text-xs text-zinc-400 uppercase tracking-wider font-semibold">
+              <span>Select Quantity & Acquire</span>
+              <span className="text-amber-400 flex items-center gap-1 font-mono">
+                <Sparkles className="w-3 h-3" />
+                SSR Instant Checkout
+              </span>
             </div>
             <AddToCartButton product={product} showQuantity={true} size="lg" fullWidth={true} />
           </div>
 
           {/* Description */}
           <div className="space-y-3 pt-2">
-            <h3 className="text-base font-bold text-slate-900">Product Overview</h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <h3 className="font-serif text-lg font-bold text-white">Maison Overview</h3>
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
               {product.description}
             </p>
           </div>
 
           {/* Feature Highlights */}
           <div className="space-y-3 pt-2">
-            <h3 className="text-base font-bold text-slate-900">Key Features</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <h3 className="font-serif text-lg font-bold text-white">Artisan Highlights</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {product.features.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                  <div className="w-4 h-4 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+                <li key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 font-light">
+                  <div className="w-4 h-4 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/30 flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-2.5 h-2.5" />
                   </div>
                   <span>{feature}</span>
@@ -183,17 +194,17 @@ export default function ProductDetailPage({ params }: Props) {
 
           {/* Technical Specifications */}
           <div className="space-y-3 pt-2">
-            <h3 className="text-base font-bold text-slate-900">Technical Specifications</h3>
-            <div className="border border-slate-200 rounded-xl overflow-hidden text-xs">
+            <h3 className="font-serif text-lg font-bold text-white">Atelier Technical Specifications</h3>
+            <div className="border border-white/10 rounded-2xl overflow-hidden text-xs divide-y divide-white/5">
               {Object.entries(product.specs).map(([key, val], idx) => (
                 <div
                   key={key}
-                  className={`grid grid-cols-2 p-3 ${
-                    idx % 2 === 0 ? 'bg-slate-50' : 'bg-white'
+                  className={`grid grid-cols-2 p-3.5 ${
+                    idx % 2 === 0 ? 'bg-zinc-950/60' : 'bg-zinc-900/60'
                   }`}
                 >
-                  <span className="font-semibold text-slate-600">{key}</span>
-                  <span className="text-slate-900">{val}</span>
+                  <span className="font-medium text-zinc-400">{key}</span>
+                  <span className="font-mono text-white">{val}</span>
                 </div>
               ))}
             </div>
@@ -202,17 +213,17 @@ export default function ProductDetailPage({ params }: Props) {
       </div>
 
       {/* Related Products */}
-      <section className="pt-8 border-t border-slate-200 space-y-6">
+      <section className="pt-12 border-t border-white/10 space-y-8">
         <div>
-          <h2 className="text-xl font-bold text-slate-900">
-            More From Our Curated Collection
+          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-amber-400">
+            COMPLEMENTARY ARCHIVE
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">
+            Complementary Atelier Creations
           </h2>
-          <p className="text-xs text-slate-500 mt-1">
-            Other high-performance items from our premium curated collection
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {relatedProducts.map(p => (
             <ProductCard key={p.id} product={p} />
           ))}
@@ -221,4 +232,3 @@ export default function ProductDetailPage({ params }: Props) {
     </div>
   );
 }
-

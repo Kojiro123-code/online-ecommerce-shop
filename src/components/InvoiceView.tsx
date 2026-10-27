@@ -43,17 +43,17 @@ export default function InvoiceView({ order }: { order: Order }) {
   return (
     <div className="space-y-8">
       {/* Success Notification Banner (no-print) */}
-      <div className="no-print bg-emerald-50 border border-emerald-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
+      <div className="no-print bg-zinc-900/80 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl backdrop-blur-md">
         <div className="flex items-center gap-4 text-center sm:text-left">
-          <div className="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-600/20">
+          <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(52,211,153,0.2)]">
             <CheckCircle2 className="w-7 h-7" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-emerald-950">
-              Order Confirmed & Invoice Generated!
+            <h1 className="font-serif text-xl font-bold text-white tracking-tight">
+              Acquisition Confirmed & HTML Deed Generated
             </h1>
-            <p className="text-sm text-emerald-800 mt-0.5">
-              Thank you, <strong>{order.customer.fullName}</strong>. Your order is registered in our SSR system.
+            <p className="text-xs text-zinc-400 mt-0.5 font-light">
+              Distinguished client <strong>{order.customer.fullName}</strong>, your reservation is sealed in our cryptographic SSR ledger.
             </p>
           </div>
         </div>
@@ -63,21 +63,21 @@ export default function InvoiceView({ order }: { order: Order }) {
           {/* Download HTML Button */}
           <button
             onClick={downloadHtmlFile}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition-all active:scale-95 cursor-pointer"
+            className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 text-black font-extrabold uppercase tracking-wider text-xs shadow-md transition-all active:scale-95 cursor-pointer"
             title="Download standalone .html invoice file"
           >
             <Download className="w-4 h-4" />
-            <span>Download .html Invoice</span>
+            <span>Download .html Deed</span>
           </button>
 
           {/* Print Button */}
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-sm transition-all shadow-xs cursor-pointer"
+            className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-zinc-950 border border-white/15 hover:bg-zinc-800 text-white font-semibold text-xs tracking-wider uppercase transition-all shadow-xs cursor-pointer"
             title="Print or save as PDF"
           >
             <Printer className="w-4 h-4" />
-            <span>Print Invoice</span>
+            <span>Print Deed</span>
           </button>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { Product } from '../types';
-import { ShoppingCart, Check, Plus, Minus } from 'lucide-react';
+import { ShoppingBag, Check, Plus, Minus } from 'lucide-react';
 
 interface AddToCartButtonProps {
   product: Product;
@@ -49,32 +49,32 @@ export default function AddToCartButton({
   };
 
   const sizeClasses = {
-    sm: 'px-3 py-1.5 text-xs',
-    md: 'px-4 py-2.5 text-sm',
-    lg: 'px-6 py-3.5 text-base',
+    sm: 'px-3.5 py-2 text-xs',
+    md: 'px-5 py-3 text-sm',
+    lg: 'px-8 py-4 text-base',
   };
 
   return (
     <div className={`flex flex-col sm:flex-row items-center gap-3 ${fullWidth ? 'w-full' : ''}`}>
       {showQuantity && (
-        <div className="flex items-center border border-slate-200 rounded-xl bg-slate-50 p-1">
+        <div className="flex items-center border border-white/15 rounded-2xl bg-zinc-900/80 p-1">
           <button
             type="button"
             onClick={handleDecrement}
             disabled={quantity <= 1}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-xs disabled:opacity-30 disabled:hover:bg-transparent transition-all"
+            className="w-8 h-8 rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 disabled:opacity-20 disabled:hover:bg-transparent transition-all cursor-pointer"
             aria-label="Decrease quantity"
           >
             <Minus className="w-3.5 h-3.5" />
           </button>
-          <span className="w-10 text-center font-semibold text-sm text-slate-800">
+          <span className="w-10 text-center font-bold text-sm text-white font-mono">
             {quantity}
           </span>
           <button
             type="button"
             onClick={handleIncrement}
             disabled={quantity >= product.stockCount}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-600 hover:bg-white hover:shadow-xs disabled:opacity-30 disabled:hover:bg-transparent transition-all"
+            className="w-8 h-8 rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 disabled:opacity-20 disabled:hover:bg-transparent transition-all cursor-pointer"
             aria-label="Increase quantity"
           >
             <Plus className="w-3.5 h-3.5" />
@@ -86,31 +86,30 @@ export default function AddToCartButton({
         type="button"
         onClick={handleAdd}
         disabled={!product.inStock}
-        className={`group font-medium rounded-xl transition-all duration-200 flex items-center justify-center gap-2 active:scale-95 shadow-sm ${
+        className={`group font-bold uppercase tracking-wider rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-md cursor-pointer ${
           fullWidth ? 'w-full' : ''
         } ${sizeClasses[size]} ${
           justAdded
-            ? 'bg-emerald-600 text-white shadow-emerald-500/20'
+            ? 'bg-emerald-400 text-black shadow-[0_0_20px_rgba(52,211,153,0.3)]'
             : product.inStock
-            ? 'bg-teal-600 hover:bg-teal-700 text-white shadow-teal-600/20'
-            : 'bg-slate-200 text-slate-400 cursor-not-allowed'
+            ? 'bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black shadow-[0_0_20px_rgba(245,158,11,0.25)] hover:shadow-[0_0_30px_rgba(245,158,11,0.4)]'
+            : 'bg-zinc-800 text-zinc-500 cursor-not-allowed border border-white/5'
         }`}
       >
         {justAdded ? (
           <>
-            <Check className="w-4 h-4 animate-in zoom-in-50" />
-            <span>Added to Cart!</span>
+            <Check className="w-4 h-4 stroke-[3]" />
+            <span>Acquired</span>
           </>
-        ) : !product.inStock ? (
-          <span>Out of Stock</span>
-        ) : (
+        ) : product.inStock ? (
           <>
-            <ShoppingCart className="w-4 h-4 group-hover:scale-110 transition-transform" />
-            <span>Add to Cart</span>
+            <ShoppingBag className="w-3.5 h-3.5" />
+            <span>Acquire</span>
           </>
+        ) : (
+          <span>Sold Out</span>
         )}
       </button>
     </div>
   );
 }
-

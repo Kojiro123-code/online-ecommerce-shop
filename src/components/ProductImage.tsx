@@ -78,10 +78,10 @@ export default function ProductImage({
   }
 
   return (
-    <div className={`relative w-full h-full flex items-center justify-center ${containerClassName !== undefined ? containerClassName : 'overflow-hidden bg-slate-100'}`}>
+    <div className={`relative w-full h-full flex items-center justify-center ${containerClassName !== undefined ? containerClassName : 'overflow-hidden bg-zinc-950'}`}>
       {/* Skeleton while loading */}
       {!isLoaded && !containerClassName?.includes('bg-transparent') && (
-        <div className="absolute inset-0 bg-slate-200 animate-pulse" />
+        <div className="absolute inset-0 bg-zinc-800 animate-pulse" />
       )}
 
       {/* eslint-disable-next-line @next/next/no-img-element */}

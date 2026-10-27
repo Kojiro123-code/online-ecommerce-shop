@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { Product } from '../types';
 import ProductCard from './ProductCard';
-import { Search, SlidersHorizontal, Sparkles } from 'lucide-react';
+import { Search, SlidersHorizontal, Sparkles, Filter } from 'lucide-react';
 
 export default function CatalogSection({ initialProducts }: { initialProducts: Product[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -33,76 +33,82 @@ export default function CatalogSection({ initialProducts }: { initialProducts: P
   return (
     <div id="sample-data" className="space-y-8">
       {/* Search and Filters Bar */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-6 shadow-xs flex flex-col md:flex-row gap-4 items-center justify-between">
+      <div className="bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 p-4 sm:p-6 shadow-xl flex flex-col lg:flex-row gap-5 items-center justify-between">
         {/* Category Pills */}
-        <div className="flex flex-wrap gap-2 w-full md:w-auto">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                selectedCategory === cat
-                  ? 'bg-teal-600 text-white shadow-xs'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="flex flex-wrap gap-2 w-full lg:w-auto">
+          {categories.map(cat => {
+            const isSelected = selectedCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-5 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+                  isSelected
+                    ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-black shadow-[0_0_20px_rgba(245,158,11,0.25)]'
+                    : 'bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-white/10'
+                }`}
+              >
+                {cat}
+              </button>
+            );
+          })}
         </div>
 
         {/* Search input & Sort */}
-        <div className="flex items-center gap-3 w-full md:w-auto">
-          <div className="relative flex-1 md:w-64">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+        <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
+          <div className="relative w-full sm:w-64">
+            <Search className="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400" />
             <input
               type="text"
-              placeholder="Search products or categories..."
+              placeholder="Search archive..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3.5 py-2 text-xs rounded-xl border border-slate-200 focus:outline-hidden focus:border-teal-500 bg-slate-50/50"
+              className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-zinc-950/80 border border-white/10 text-white placeholder:text-zinc-500 text-xs focus:outline-hidden focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/60 transition-all font-medium"
             />
           </div>
 
-          <div className="relative">
+          <div className="relative w-full sm:w-auto">
             <select
               value={sortBy}
+              aria-label="Sort products by criteria"
               onChange={e => setSortBy(e.target.value as any)}
-              className="appearance-none pl-8 pr-8 py-2 text-xs font-medium rounded-xl border border-slate-200 bg-slate-50/50 focus:outline-hidden focus:border-teal-500 text-slate-700 cursor-pointer"
+              className="w-full sm:w-auto px-4 py-2.5 rounded-2xl bg-zinc-950/80 border border-white/10 text-zinc-300 text-xs font-semibold uppercase tracking-wider focus:outline-hidden focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/60 transition-all cursor-pointer"
             >
-              <option value="featured">Featured</option>
+              <option value="featured">Featured Archive</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
-              <option value="rating">Highest Rated</option>
+              <option value="rating">Client Evaluation</option>
             </select>
-            <SlidersHorizontal className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
           </div>
         </div>
       </div>
 
       {/* Catalog Grid */}
       {filteredProducts.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center text-slate-500">
-          <p className="font-semibold text-slate-700">No products match your criteria</p>
-          <p className="text-xs mt-1">Try resetting the search filters or category selection.</p>
+        <div className="bg-zinc-900/40 backdrop-blur-md rounded-[2.5rem] border border-white/10 p-16 text-center max-w-xl mx-auto shadow-xl">
+          <Sparkles className="w-10 h-10 text-amber-400 mx-auto mb-4" />
+          <h3 className="font-serif text-2xl font-bold text-white mb-2">No Archive Pieces Found</h3>
+          <p className="text-xs text-zinc-400 mb-6 font-light">
+            No items matched your current filter criteria. Reset your search to view all {initialProducts.length} curated atelier creations.
+          </p>
+          <button
+            onClick={() => {
+              setSelectedCategory('All');
+              setSearchQuery('');
+              setSortBy('featured');
+            }}
+            className="px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 text-black font-extrabold uppercase tracking-wider text-xs shadow-md transition-all cursor-pointer"
+          >
+            Reset Filters
+          </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       )}
-
-      {/* Product Count Indicator */}
-      <div className="flex items-center justify-between text-xs text-slate-400 pt-4 px-1">
-        <span className="flex items-center gap-1.5 font-medium text-slate-500">
-          <Sparkles className="w-3.5 h-3.5 text-teal-600" />
-          Showing {filteredProducts.length} of {initialProducts.length} products
-        </span>
-        <span className="text-[11px] text-slate-400 font-medium">⚡ Server-Side Rendered (SSR) Catalog</span>
-      </div>
     </div>
   );
 }
-

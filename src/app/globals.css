@@ -3,56 +3,99 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 248, 250, 252;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 244, 244, 245;
+  --background-start-rgb: 8, 8, 10;
+  --background-end-rgb: 5, 5, 7;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #f8fafc;
+  background: #08080a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Smooth transition for hover effects */
 * {
   box-sizing: border-box;
 }
 
+/* Luxury animations */
 @keyframes heroFloat {
   0%, 100% {
-    transform: translateY(0px) rotate(-1.5deg);
+    transform: translateY(0px) rotate(-1deg);
   }
   50% {
-    transform: translateY(-16px) rotate(1deg);
+    transform: translateY(-14px) rotate(1deg);
   }
 }
 
 @keyframes shadowPulse {
   0%, 100% {
     transform: scale(1);
-    opacity: 0.65;
+    opacity: 0.7;
   }
   50% {
-    transform: scale(0.82);
-    opacity: 0.3;
+    transform: scale(0.85);
+    opacity: 0.35;
+  }
+}
+
+@keyframes goldGlow {
+  0%, 100% {
+    opacity: 0.35;
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.65;
+    filter: blur(55px);
   }
 }
 
 .animate-hero-float {
-  animation: heroFloat 5s ease-in-out infinite;
+  animation: heroFloat 5.5s ease-in-out infinite;
 }
 
 .animate-shadow-pulse {
-  animation: shadowPulse 5s ease-in-out infinite;
+  animation: shadowPulse 5.5s ease-in-out infinite;
 }
 
-/* 3D stroke outline text for the giant background watermark */
-.text-stroke-white {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
-  color: transparent;
+.animate-gold-glow {
+  animation: goldGlow 6s ease-in-out infinite;
+}
+
+/* Glassmorphism Luxury Utilities */
+.glass-luxury {
+  background: rgba(18, 18, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+  border: 2px solid #09090b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
 }
 
 /* Print styling for Invoice */
@@ -68,4 +111,3 @@ body {
     display: block !important;
   }
 }
-

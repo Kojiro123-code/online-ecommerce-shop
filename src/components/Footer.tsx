@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import AtelierLogo from './AtelierLogo';
 import { Sparkles, ShieldCheck, Zap, Globe, Github, Mail, ArrowRight } from 'lucide-react';
 
 export default function Footer() {
@@ -46,14 +47,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-black font-black text-lg shadow-[0_0_20px_rgba(245,158,11,0.25)]">
-                É
-              </div>
-              <span className="font-bold text-xl text-white">
-                ONLINE <span className="text-amber-400 font-sans tracking-widest text-xs uppercase px-1.5 py-0.5 rounded-sm bg-amber-400/10 border border-amber-400/30">ATELIER</span>
-              </span>
-            </div>
+            <Link href="/" className="inline-block group">
+              <AtelierLogo size="md" />
+            </Link>
             <p className="text-xs text-zinc-400 max-w-sm font-light leading-relaxed">
               Curated haute technology, acoustic masterpieces, and wearable innovations. Experience premier Server-Side Rendered luxury e-commerce with encrypted instant invoices.
             </p>

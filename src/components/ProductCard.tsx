@@ -44,7 +44,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </Link>
 
       {/* Card Body */}
-      <div className="p-6 flex flex-col flex-1">
+      <div className="p-5 flex flex-col flex-1">
         {/* Rating & Availability */}
         <div className="flex items-center justify-between text-xs mb-2.5">
           <div className="flex items-center gap-1.5">
@@ -75,25 +75,24 @@ export default function ProductCard({ product }: { product: Product }) {
         </p>
 
         {/* Price & Actions */}
-        <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3 mt-auto">
-          <div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-xl font-bold font-mono text-white tracking-tight">
-                ${product.price.toFixed(2)}
+        <div className="pt-3.5 border-t border-white/10 flex items-center justify-between gap-2 mt-auto">
+          <div className="flex flex-col justify-center min-w-0 shrink-0">
+            <span className="text-lg sm:text-xl font-bold font-mono text-white tracking-tight leading-none">
+              ${product.price.toFixed(2)}
+            </span>
+            {product.originalPrice && (
+              <span className="text-[10px] sm:text-[11px] text-zinc-500 line-through font-mono leading-none mt-1">
+                ${product.originalPrice.toFixed(2)}
               </span>
-              {product.originalPrice && (
-                <span className="text-xs text-zinc-500 line-through font-mono">
-                  ${product.originalPrice.toFixed(2)}
-                </span>
-              )}
-            </div>
+            )}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 shrink-0">
             <Link
               href={`/products/${product.id}`}
-              className="p-2.5 rounded-xl text-zinc-400 hover:text-white hover:bg-white/10 transition-all border border-transparent hover:border-white/15"
+              className="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-white/10 transition-all border border-transparent hover:border-white/15 shrink-0"
               title="Inspect Details"
+              aria-label={`Inspect ${product.name}`}
             >
               <ArrowRight className="w-4 h-4" />
             </Link>

@@ -114,7 +114,7 @@ export default function ProductDetailPage({ params }: Props) {
               <span>ATELIER EDITION • PIECE #{product.id.toUpperCase()}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight sm:leading-[1.18]">
               {product.name}
             </h1>
 
@@ -159,7 +159,7 @@ export default function ProductDetailPage({ params }: Props) {
           </div>
 
           {/* Add to Cart Section */}
-          <div className="p-6 rounded-3xl bg-zinc-900/80 backdrop-blur-md border border-amber-400/30 space-y-4 shadow-[0_0_30px_rgba(245,158,11,0.06)]">
+          <div className="p-6 rounded-3xl bg-zinc-900/80 backdrop-blur-md border border-amber-400/30 space-y-4 shadow-[0_0_30px_rgba(245,158,11,0.06)] overflow-hidden">
             <div className="flex items-center justify-between text-xs text-zinc-400 uppercase tracking-wider font-semibold">
               <span>Select Quantity & Acquire</span>
               <span className="text-amber-400 flex items-center gap-1 font-mono">

@@ -55,9 +55,9 @@ export default function AddToCartButton({
   };
 
   return (
-    <div className={`flex flex-col sm:flex-row items-center gap-3 ${fullWidth ? 'w-full' : ''}`}>
+    <div className={`flex flex-col sm:flex-row items-stretch sm:items-center gap-3 ${fullWidth ? 'w-full' : ''}`}>
       {showQuantity && (
-        <div className="flex items-center border border-white/15 rounded-2xl bg-zinc-900/80 p-1">
+        <div className="flex items-center justify-between border border-white/15 rounded-2xl bg-zinc-900/80 p-1 shrink-0">
           <button
             type="button"
             onClick={handleDecrement}
@@ -86,8 +86,12 @@ export default function AddToCartButton({
         type="button"
         onClick={handleAdd}
         disabled={!product.inStock}
-        className={`group font-bold uppercase tracking-wider rounded-2xl transition-all duration-300 flex items-center justify-center gap-1.5 active:scale-95 shadow-md cursor-pointer whitespace-nowrap shrink-0 ${
-          fullWidth ? 'w-full' : ''
+        className={`group font-bold uppercase tracking-wider rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 active:scale-95 shadow-md cursor-pointer whitespace-nowrap ${
+          fullWidth
+            ? showQuantity
+              ? 'flex-1 w-full sm:w-auto'
+              : 'w-full'
+            : 'shrink-0'
         } ${sizeClasses[size]} ${
           justAdded
             ? 'bg-emerald-400 text-black shadow-[0_0_20px_rgba(52,211,153,0.3)]'

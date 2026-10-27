@@ -3,15 +3,15 @@ import { Order } from '../types';
 export function generateInvoiceHtml(order: Order): string {
   const formattedDate = new Date(order.date).toLocaleDateString('en-US', {
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
   });
 
   const paymentLabels: Record<string, string> = {
-    credit_card: 'Credit / Debit Card (Online)',
-    bank_transfer: 'Direct Bank Wire / Virtual Account',
+    credit_card: 'Credit / Debit Card',
+    bank_transfer: 'Direct Bank Wire',
     cod: 'Cash on Delivery (COD)',
   };
 
@@ -19,17 +19,17 @@ export function generateInvoiceHtml(order: Order): string {
     .map(
       (item, idx) => `
       <tr>
-        <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #1e293b;">
+        <td style="padding: 8px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; color: #0f172a;">
           <strong>${idx + 1}. ${item.product.name}</strong><br>
-          <span style="font-size: 12px; color: #64748b;">Category: ${item.product.category} | SKU: ${item.product.id}</span>
+          <span style="font-size: 11px; color: #64748b; font-family: monospace;">REF. ${item.product.id.toUpperCase()}</span>
         </td>
-        <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-size: 14px; text-align: center; color: #334155;">
+        <td style="padding: 8px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; text-align: center; color: #334155;">
           ${item.quantity}
         </td>
-        <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-size: 14px; text-align: right; color: #334155;">
+        <td style="padding: 8px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; text-align: right; color: #334155; font-family: monospace;">
           $${item.product.price.toFixed(2)}
         </td>
-        <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-size: 14px; text-align: right; font-weight: 600; color: #0f172a;">
+        <td style="padding: 8px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; text-align: right; font-weight: 700; color: #0f172a; font-family: monospace;">
           $${(item.product.price * item.quantity).toFixed(2)}
         </td>
       </tr>
@@ -42,64 +42,74 @@ export function generateInvoiceHtml(order: Order): string {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invoice #${order.id} - Online E-Commerce Shop</title>
+  <title>Receipt #${order.id} - Online Atelier</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: #f8fafc;
       color: #0f172a;
-      padding: 40px 20px;
-      line-height: 1.5;
+      padding: 30px 16px;
+      line-height: 1.4;
+      font-size: 13px;
     }
-    .invoice-container {
-      max-width: 800px;
+    .receipt-container {
+      max-width: 720px;
       margin: 0 auto;
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      padding: 48px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      padding: 28px 32px;
     }
     .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      border-bottom: 2px solid #0d9488;
-      padding-bottom: 28px;
-      margin-bottom: 32px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 16px;
+      margin-bottom: 18px;
     }
     .brand h1 {
-      font-size: 26px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
       color: #0f172a;
     }
-    .brand span { color: #0d9488; }
-    .brand p { font-size: 13px; color: #64748b; margin-top: 4px; }
-    .invoice-title {
+    .brand span {
+      background: #fef3c7;
+      color: #b45309;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #fcd34d;
+      margin-left: 4px;
+    }
+    .brand p { font-size: 11px; color: #64748b; margin-top: 3px; }
+    .receipt-title {
       text-align: right;
     }
-    .invoice-title h2 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #0d9488;
-      text-transform: uppercase;
+    .receipt-title h2 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #0f172a;
       letter-spacing: 1px;
     }
-    .invoice-title .order-id {
-      font-size: 14px;
-      font-weight: 600;
+    .receipt-title .order-id {
+      font-size: 12px;
+      font-family: monospace;
       color: #334155;
-      margin-top: 4px;
+      margin-top: 2px;
     }
-    .invoice-title .status-pill {
+    .receipt-title .status-pill {
       display: inline-block;
-      margin-top: 8px;
-      padding: 4px 12px;
+      margin-top: 4px;
+      padding: 2px 8px;
       background: #ecfdf5;
       color: #047857;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       border-radius: 9999px;
       border: 1px solid #a7f3d0;
@@ -109,35 +119,42 @@ export function generateInvoiceHtml(order: Order): string {
     .meta-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-bottom: 36px;
+      gap: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      font-size: 12px;
     }
     .meta-card h3 {
-      font-size: 12px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #64748b;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       font-weight: 700;
     }
     .meta-card p {
-      font-size: 14px;
       color: #1e293b;
-      line-height: 1.6;
+      line-height: 1.4;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 32px;
+      margin-bottom: 18px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
     }
     th {
       background-color: #f1f5f9;
       color: #475569;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      padding: 12px 16px;
+      padding: 8px 12px;
       text-align: left;
     }
     th.text-center { text-align: center; }
@@ -145,51 +162,67 @@ export function generateInvoiceHtml(order: Order): string {
     .totals-area {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 36px;
+      margin-bottom: 18px;
     }
     .totals-table {
-      width: 320px;
+      width: 260px;
       border-collapse: collapse;
     }
     .totals-table td {
-      padding: 8px 12px;
-      font-size: 14px;
+      padding: 4px 8px;
+      font-size: 12px;
+      color: #475569;
+    }
+    .totals-table td.amount {
+      text-align: right;
+      font-family: monospace;
+      font-weight: 600;
+      color: #0f172a;
     }
     .totals-table tr.grand-total td {
-      padding-top: 14px;
+      padding-top: 8px;
       border-top: 2px solid #0f172a;
-      font-size: 18px;
-      font-weight: 800;
-      color: #0d9488;
+      font-size: 15px;
+      font-weight: 900;
+      color: #0f172a;
     }
     .footer {
       border-top: 1px solid #e2e8f0;
-      padding-top: 24px;
-      font-size: 12px;
+      padding-top: 12px;
+      font-size: 10px;
       color: #64748b;
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.4;
     }
     @media print {
+      @page {
+        size: portrait;
+        margin: 8mm 10mm;
+      }
       body { background: #ffffff; padding: 0; }
-      .invoice-container { border: none; box-shadow: none; padding: 20px; }
+      .receipt-container {
+        border: 1px solid #cbd5e1;
+        box-shadow: none;
+        padding: 16px 20px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
       .no-print { display: none !important; }
     }
   </style>
 </head>
 <body>
-  <div class="invoice-container">
+  <div class="receipt-container">
     <div class="header">
       <div class="brand">
-        <h1>Online <span>E-Commerce Shop</span></h1>
-        <p>Server-Side Rendered E-Commerce Platform</p>
-        <p>support@ecommerce.local • +1 (800) 555-0199</p>
+        <h1>ONLINE <span>ATELIER</span></h1>
+        <p>Haute E-Commerce • Official Purchase Receipt</p>
       </div>
-      <div class="invoice-title">
-        <h2>INVOICE</h2>
-        <div class="order-id">Order Ref: ${order.id}</div>
-        <div class="order-id" style="font-size: 12px; color: #64748b;">${formattedDate}</div>
-        <div><span class="status-pill">${order.status}</span></div>
+      <div class="receipt-title">
+        <h2>RECEIPT</h2>
+        <div class="order-id">#${order.id}</div>
+        <div class="order-id" style="font-size: 11px; color: #64748b;">${formattedDate}</div>
+        <div><span class="status-pill">${order.status === 'Confirmed' ? 'Paid & Confirmed' : order.status}</span></div>
       </div>
     </div>
 
@@ -197,27 +230,25 @@ export function generateInvoiceHtml(order: Order): string {
       <div class="meta-card">
         <h3>Billed & Shipped To</h3>
         <p><strong>${order.customer.fullName}</strong></p>
-        <p>${order.customer.address}</p>
-        <p>${order.customer.city}, ${order.customer.postalCode}</p>
-        <p>${order.customer.country}</p>
-        <p style="margin-top: 4px; color: #64748b; font-size: 13px;">${order.customer.email} • ${order.customer.phone}</p>
+        <p>${order.customer.address}, ${order.customer.city}</p>
+        <p>${order.customer.country} • ${order.customer.postalCode}</p>
+        <p style="font-size: 11px; color: #64748b; margin-top: 2px;">${order.customer.email} • ${order.customer.phone}</p>
       </div>
-      <div class="meta-card">
-        <h3>Payment & Dispatch Information</h3>
-        <p><strong>Payment Method:</strong> ${paymentLabels[order.customer.paymentMethod] || order.customer.paymentMethod}</p>
-        <p><strong>Payment Status:</strong> <span style="color: #047857; font-weight: 600;">Authorized / Paid</span></p>
-        <p><strong>Fulfillment Mode:</strong> Standard Priority Express</p>
-        <p><strong>Delivery Estimate:</strong> 2 - 3 Business Days</p>
+      <div class="meta-card" style="text-align: right;">
+        <h3>Payment & Dispatch</h3>
+        <p>Payment: <strong>${paymentLabels[order.customer.paymentMethod] || order.customer.paymentMethod}</strong></p>
+        <p style="color: #047857; font-weight: 600;">Status: Authorized & Paid</p>
+        <p>Courier: Standard Insured</p>
       </div>
     </div>
 
     <table>
       <thead>
         <tr>
-          <th>Description</th>
-          <th class="text-center" style="width: 80px;">Qty</th>
-          <th class="text-right" style="width: 120px;">Unit Price</th>
-          <th class="text-right" style="width: 120px;">Amount</th>
+          <th>Item</th>
+          <th class="text-center" style="width: 50px;">Qty</th>
+          <th class="text-right" style="width: 100px;">Price</th>
+          <th class="text-right" style="width: 110px;">Amount</th>
         </tr>
       </thead>
       <tbody>
@@ -228,30 +259,29 @@ export function generateInvoiceHtml(order: Order): string {
     <div class="totals-area">
       <table class="totals-table">
         <tr>
-          <td style="color: #64748b;">Subtotal</td>
-          <td style="text-align: right; font-weight: 600;">$${order.subtotal.toFixed(2)}</td>
+          <td>Subtotal:</td>
+          <td class="amount">$${order.subtotal.toFixed(2)}</td>
         </tr>
         <tr>
-          <td style="color: #64748b;">Shipping Fee</td>
-          <td style="text-align: right; font-weight: 600;">${order.shipping === 0 ? 'FREE ($0.00)' : '$' + order.shipping.toFixed(2)}</td>
+          <td>Shipping:</td>
+          <td class="amount">${order.shipping === 0 ? 'FREE ($0.00)' : `$${order.shipping.toFixed(2)}`}</td>
         </tr>
         <tr>
-          <td style="color: #64748b;">Estimated Tax (8%)</td>
-          <td style="text-align: right; font-weight: 600;">$${order.tax.toFixed(2)}</td>
+          <td>Sales Tax (8%):</td>
+          <td class="amount">$${order.tax.toFixed(2)}</td>
         </tr>
         <tr class="grand-total">
-          <td>Total Paid</td>
-          <td style="text-align: right;">$${order.total.toFixed(2)}</td>
+          <td>Total Paid:</td>
+          <td class="amount">$${order.total.toFixed(2)}</td>
         </tr>
       </table>
     </div>
 
     <div class="footer">
-      <p>Thank you for shopping with <strong>Online E-Commerce Shop</strong>! This official invoice was generated via Server-Side Rendering (SSR).</p>
-      <p>Questions about your shipment or warranty? Reach out to support@ecommerceshop.local quoting Order <strong>#${order.id}</strong>.</p>
+      <p><strong>Thank you for your order with Online Atelier!</strong></p>
+      <p>Official purchase deed and verified authenticity. Retain this receipt for your records.</p>
     </div>
   </div>
 </body>
 </html>`;
 }
-

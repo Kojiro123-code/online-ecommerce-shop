@@ -98,15 +98,55 @@ body {
   background: #d4af37;
 }
 
-/* Print styling for Invoice */
+/* Print styling for 1-Page Compact Receipt */
 @media print {
-  body {
-    background: white;
-    color: black;
+  @page {
+    size: portrait;
+    margin: 8mm 10mm;
   }
-  .no-print {
+
+  /* Force hide headers, footers, navigation, background glow effects, and UI elements */
+  header,
+  footer,
+  nav,
+  .no-print,
+  [class*="blur-"],
+  [class*="pointer-events-none"] {
     display: none !important;
   }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 10pt !important;
+    line-height: 1.35 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .receipt-card {
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
   .print-only {
     display: block !important;
   }

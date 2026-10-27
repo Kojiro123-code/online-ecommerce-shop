@@ -49,7 +49,7 @@ export default function AddToCartButton({
   };
 
   const sizeClasses = {
-    sm: 'px-3 py-2 text-[11px]',
+    sm: 'px-2.5 py-2 text-[11px]',
     md: 'px-5 py-3 text-sm',
     lg: 'px-8 py-4 text-base',
   };
@@ -103,12 +103,12 @@ export default function AddToCartButton({
         {justAdded ? (
           <>
             <Check className="w-4 h-4 stroke-[3]" />
-            <span>Acquired</span>
+            <span>Added to Cart</span>
           </>
         ) : product.inStock ? (
           <>
             <ShoppingBag className="w-3.5 h-3.5" />
-            <span>Acquire</span>
+            <span>Add to Cart</span>
           </>
         ) : (
           <span>Sold Out</span>

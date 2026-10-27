@@ -270,7 +270,7 @@ export default function HeroSlider({ products }: HeroSliderProps) {
             onClick={handleAcquire}
             className="flex-1 sm:flex-initial px-8 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-extrabold uppercase tracking-[0.2em] text-xs shadow-[0_0_25px_rgba(245,158,11,0.3)] hover:shadow-[0_0_35px_rgba(245,158,11,0.5)] active:scale-95 transition-all cursor-pointer"
           >
-            Acquire Piece
+            Add to Cart
           </button>
         </div>
       </div>

@@ -28,9 +28,9 @@ export default function CheckoutForm() {
   if (items.length === 0) {
     return (
       <div className="bg-zinc-900/50 backdrop-blur-xl rounded-[2.5rem] border border-white/10 p-16 text-center max-w-lg mx-auto shadow-2xl">
-        <h2 className="text-2xl font-bold text-white mb-2">No Pieces to Acquire</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">No Items in Cart</h2>
         <p className="text-xs text-zinc-400 mb-6 font-light">
-          Your private cart is empty. Please select archive pieces before initiating concierge acquisition.
+          Your private cart is empty. Please select archive pieces before initiating checkout.
         </p>
         <Link
           href="/"

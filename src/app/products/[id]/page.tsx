@@ -161,7 +161,7 @@ export default function ProductDetailPage({ params }: Props) {
           {/* Add to Cart Section */}
           <div className="p-6 rounded-3xl bg-zinc-900/80 backdrop-blur-md border border-amber-400/30 space-y-4 shadow-[0_0_30px_rgba(245,158,11,0.06)] overflow-hidden">
             <div className="flex items-center justify-between text-xs text-zinc-400 uppercase tracking-wider font-semibold">
-              <span>Select Quantity & Acquire</span>
+              <span>Select Quantity & Add to Cart</span>
               <span className="text-amber-400 flex items-center gap-1 font-mono">
                 <Sparkles className="w-3 h-3" />
                 SSR Instant Checkout

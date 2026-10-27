@@ -280,7 +280,7 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 184,
     category: 'Workspace',
-    image: '/images/products/prod-011.svg',
+    image: '/images/products/prod-011.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80',
     description: 'Transform your creative workflow and desktop experience. Featuring a breathtaking 34-inch 1800R curved Quantum Dot OLED panel with ultra-deep blacks, 0.03ms pixel response time, and 99.3% DCI-P3 cinema color fidelity.',
     features: [
@@ -307,7 +307,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 326,
     category: 'Audio',
-    image: '/images/products/prod-012.svg',
+    image: '/images/products/prod-012.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80',
     description: 'Ultra-low distortion acoustic chamber paired with 11mm custom dual-magnet dynamic drivers. Intelligent hybrid noise cancellation eliminates up to 42dB of environmental distractions with seamless wireless Qi charging case.',
     features: [
@@ -334,7 +334,7 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 163,
     category: 'Photography',
-    image: '/images/products/prod-013.svg',
+    image: '/images/products/prod-013.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
     description: 'Capture butter-smooth cinematic tracking shots, time-lapses, and vlogs. Equipped with aerospace-grade 3-axis brushless motors, an integrated magnetic AI vision tracking sensor that follows subjects without any phone app, and a built-in bi-color fill light.',
     features: [
@@ -361,7 +361,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 204,
     category: 'Accessories',
-    image: '/images/products/prod-014.svg',
+    image: '/images/products/prod-014.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=800&q=80',
     description: 'The ultimate minimalist charging station for your nightstand or travel luggage. Folds completely flat into a pocket-sized aircraft-grade aluminum puck. Charges iPhone, Apple Watch, and AirPods simultaneously with full 15W Qi2 fast charging.',
     features: [
@@ -388,8 +388,8 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 275,
     category: 'Wearables',
-    image: '/images/products/prod-015.svg',
-    fallbackImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+    image: '/images/products/prod-015.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80',
     description: 'Weighing less than 5 grams, this aerospace titanium smart ring tracks your body’s baseline signals 24/7. Features research-grade sensors for heart rate variability (HRV), sleep staging, skin temperature fluctuations, and daytime stress tracking.',
     features: [
       'Medical-grade PPG infrared sensors & dual temperature sensors',
@@ -415,8 +415,8 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 118,
     category: 'Workspace',
-    image: '/images/products/prod-016.svg',
-    fallbackImage: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80',
+    image: '/images/products/prod-016.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80',
     description: 'Engineered with real 3K woven carbon fiber and heavy-gauge sandblasted aluminum. The dual-hinge design raises your laptop up to 12 inches to perfect eye-level, eliminating neck stiffness while the slotted base optimizes heat dissipation.',
     features: [
       'Aerospace 3K carbon fiber tray with cooling vents',
@@ -442,8 +442,8 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 195,
     category: 'Photography',
-    image: '/images/products/prod-017.svg',
-    fallbackImage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
+    image: '/images/products/prod-017.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=800&q=80',
     description: 'Weighing under 249 grams to fly without mandatory regulatory registration in most jurisdictions. Captures true vertical and horizontal 4K HDR videos with a mechanical 3-axis gimbal, Level 5 wind resistance, and automated QuickShot cinematics.',
     features: [
       'Ultralight sub-249g folding pocket design',
@@ -469,8 +469,8 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 152,
     category: 'Audio',
-    image: '/images/products/prod-018.svg',
-    fallbackImage: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
+    image: '/images/products/prod-018.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80',
     description: 'Unleash the full potential of your high-impedance headphones. Featuring dual ESS ES9038Q2M DAC chips operating in balanced configuration, paired with THX AAA amplification architecture to deliver crystal-pure sound with 0.0001% THD+N.',
     features: [
       'Dual ESS Sabre DAC architecture with 32-bit / 768kHz PCM & DSD512',

@@ -105,3 +105,4 @@ export default function CatalogSection({ initialProducts }: { initialProducts: P
     </div>
   );
 }
+

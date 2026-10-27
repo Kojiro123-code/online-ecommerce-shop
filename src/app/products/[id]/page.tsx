@@ -219,3 +219,4 @@ export default function ProductDetailPage({ params }: Props) {
     </div>
   );
 }
+

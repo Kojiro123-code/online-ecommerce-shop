@@ -58,3 +58,4 @@ export default function InvoicePageClient({ orderId }: { orderId: string }) {
 
   return <InvoiceView order={order} />;
 }
+

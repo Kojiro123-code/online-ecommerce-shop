@@ -254,3 +254,4 @@ export function generateInvoiceHtml(order: Order): string {
 </body>
 </html>`;
 }
+

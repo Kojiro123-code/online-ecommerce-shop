@@ -20,3 +20,4 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function InvoicePage({ params }: Props) {
   return <InvoicePageClient orderId={params.id} />;
 }
+

@@ -275,3 +275,4 @@ export function getRelatedProducts(currentId: string, limit = 3): Product[] {
     .concat(products.filter(p => p.id !== currentId && p.category !== current.category))
     .slice(0, limit);
 }
+

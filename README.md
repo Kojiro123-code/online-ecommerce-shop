@@ -146,9 +146,7 @@ git add .
 git commit -m "feat: complete SSR e-commerce storefront with 10 sample products and HTML invoice"
 
 # Link to your remote GitHub repository
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.git
-
-# Push to public GitHub
+git remote set-url origin https://github.com/Kojiro123-code/E-Com.git
 git push -u origin main
 \`\`\`
 
@@ -206,3 +204,4 @@ ssr-ecommerce/
 
 ## 📄 License
 MIT License. Open source and free to use for portfolios, client demonstrations, and commercial projects.
+

@@ -44,3 +44,4 @@ export interface Order {
   total: number;
   status: 'Confirmed' | 'Processing' | 'Shipped' | 'Delivered';
 }
+

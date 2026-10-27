@@ -245,3 +245,4 @@ export default function InvoiceView({ order }: { order: Order }) {
     </div>
   );
 }
+

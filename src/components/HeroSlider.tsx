@@ -115,17 +115,17 @@ export default function HeroSlider({ products }: HeroSliderProps) {
     >
       {/* 1. TOP HEADER BAR */}
       <div className="relative z-20 flex items-center justify-between text-xs sm:text-sm font-semibold tracking-wider pb-4">
-        {/* Brand Logo */}
+        {/* Brand / Section Label */}
         <Link
           href="/"
-          className="font-black tracking-[0.25em] text-white hover:text-cyan-300 transition-colors uppercase text-sm sm:text-base"
+          className="font-black tracking-[0.25em] text-white hover:text-cyan-300 transition-colors uppercase text-sm sm:text-base flex items-center gap-2"
         >
-          FLOAT
+          <span>SPOTLIGHT</span>
         </Link>
 
         {/* Subtitle / Center Label */}
         <div className="hidden sm:block text-[11px] sm:text-xs tracking-[0.25em] uppercase font-bold text-white/80">
-          WOOCOMMERCE PRODUCT SLIDER
+          CURATED PRODUCT SHOWCASE
         </div>
 
         {/* Social Icons & Cart */}

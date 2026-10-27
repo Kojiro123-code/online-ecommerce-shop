@@ -486,6 +486,33 @@ export const products: Product[] = [
     },
     inStock: true,
     stockCount: 17
+  },
+  {
+    id: 'prod-019',
+    name: 'Shishido Cyber-Kicks Futuristic Runners',
+    tagline: 'Cyber-infused pneumatic adaptive cushioning with carbon-fiber architecture.',
+    price: 749.00,
+    originalPrice: 899.00,
+    rating: 5.0,
+    reviewCount: 428,
+    category: 'Wearables',
+    image: '/images/products/prod-019.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80',
+    description: 'A revolutionary cybernetic sneaker designed with pneumatic adaptive cushioning, glowing fiber-optic accents, and aerospace carbon-fiber architecture for unmatched street performance and mind-blowing visuals.',
+    features: [
+      'Pneumatic adaptive micro-cushioning sole unit',
+      'Aerospace 3K woven carbon-fiber stabilizer plate',
+      'Integrated fiber-optic glow channels with magnetic charging',
+      'Ultra-breathable ballistic nylon and Kevlar upper weave'
+    ],
+    specs: {
+      'Sole Tech': 'Pneumatic Multi-Chamber Air Cell',
+      'Plate Material': '3K Toray Carbon Fiber Outrigger',
+      'Upper': 'Ballistic Ripstop & TPU Exoskeleton',
+      'Weight': '320g featherlight performance'
+    },
+    inStock: true,
+    stockCount: 12
   }
 ];
 

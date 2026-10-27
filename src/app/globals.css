@@ -21,6 +21,40 @@ body {
   box-sizing: border-box;
 }
 
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1deg);
+  }
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(0.82);
+    opacity: 0.3;
+  }
+}
+
+.animate-hero-float {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+.animate-shadow-pulse {
+  animation: shadowPulse 5s ease-in-out infinite;
+}
+
+/* 3D stroke outline text for the giant background watermark */
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
+  color: transparent;
+}
+
 /* Print styling for Invoice */
 @media print {
   body {

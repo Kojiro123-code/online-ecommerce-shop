@@ -42,7 +42,7 @@ export function generateInvoiceHtml(order: Order): string {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invoice #${order.id} - AURA Store</title>
+  <title>Invoice #${order.id} - Online E-Commerce Shop</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -181,9 +181,9 @@ export function generateInvoiceHtml(order: Order): string {
   <div class="invoice-container">
     <div class="header">
       <div class="brand">
-        <h1>AURA<span>.STORE</span></h1>
+        <h1>Online <span>E-Commerce Shop</span></h1>
         <p>Server-Side Rendered E-Commerce Platform</p>
-        <p>support@aurastore.local • +1 (800) 555-0199</p>
+        <p>support@ecommerce.local • +1 (800) 555-0199</p>
       </div>
       <div class="invoice-title">
         <h2>INVOICE</h2>
@@ -247,8 +247,8 @@ export function generateInvoiceHtml(order: Order): string {
     </div>
 
     <div class="footer">
-      <p>Thank you for shopping with <strong>AURA Store</strong>! This official invoice was generated via Server-Side Rendering (SSR).</p>
-      <p>Questions about your shipment or warranty? Reach out to support@aurastore.local quoting Order <strong>#${order.id}</strong>.</p>
+      <p>Thank you for shopping with <strong>Online E-Commerce Shop</strong>! This official invoice was generated via Server-Side Rendering (SSR).</p>
+      <p>Questions about your shipment or warranty? Reach out to support@ecommerceshop.local quoting Order <strong>#${order.id}</strong>.</p>
     </div>
   </div>
 </body>

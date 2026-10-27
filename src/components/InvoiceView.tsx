@@ -89,7 +89,7 @@ export default function InvoiceView({ order }: { order: Order }) {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-2xl font-black text-slate-900 tracking-tight">
-                AURA<span className="text-teal-600">.STORE</span>
+                Online <span className="text-teal-600">E-Commerce Shop</span>
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-1">Official Server-Side Rendered E-Commerce Invoice</p>
@@ -224,7 +224,7 @@ export default function InvoiceView({ order }: { order: Order }) {
         {/* Invoice Footer note */}
         <div className="pt-6 border-t border-slate-200 text-center text-xs text-slate-500 space-y-1">
           <p className="font-semibold text-slate-700">
-            Thank you for your order with AURA Store!
+            Thank you for your order with Online E-Commerce Shop!
           </p>
           <p>
             This official order document was produced using Server-Side Rendering (SSR). You can download the standalone <strong>.html</strong> file anytime or print this receipt for your records.
@@ -239,7 +239,7 @@ export default function InvoiceView({ order }: { order: Order }) {
           className="inline-flex items-center gap-2 text-sm font-semibold text-teal-600 hover:text-teal-700 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Continue Shopping at AURA Store</span>
+          <span>Continue Shopping at Online E-Commerce Shop</span>
         </Link>
       </div>
     </div>

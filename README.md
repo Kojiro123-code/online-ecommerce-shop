@@ -1,4 +1,4 @@
-# ⚡ AURA Store — Server-Side Rendered (SSR) E-Commerce Platform
+# 🛒 Online E-Commerce Shop — Server-Side Rendered (SSR) Platform
 
 A production-ready, high-performance E-Commerce storefront engineered with **Next.js 14 (App Router)** and **Server-Side Rendering (SSR)**. Features a curated 10-item sample catalog, dynamic product detail pages, interactive cart state, checkout workflow, and automated standalone **`.html` invoice generation & download**.
 

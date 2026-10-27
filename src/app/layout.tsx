@@ -5,8 +5,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'AURA Store | Server-Side Rendered (SSR) Modern E-Commerce',
-  description: 'Fast, modern, and beautiful Next.js SSR E-Commerce store featuring 10 sample products, real-time cart, checkout flow, and downloadable HTML invoices.',
+  title: 'Online E-Commerce Shop | Fast SSR Storefront',
+  description: 'Modern, high-performance Online E-Commerce Shop powered by Next.js Server-Side Rendering (SSR). Browse premium electronics, audio gear, and accessories with instant downloadable HTML invoices.',
 };
 
 export default function RootLayout({

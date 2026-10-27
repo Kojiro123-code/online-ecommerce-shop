@@ -2,141 +2,156 @@ import React from 'react';
 import { products } from '../data/products';
 import CatalogSection from '../components/CatalogSection';
 import ProductImage from '../components/ProductImage';
-import { Zap, ShieldCheck, Truck, FileText, ArrowRight, Star, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Zap, ShieldCheck, Truck, FileText, ArrowRight, Star, Sparkles, CheckCircle2, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 
 // Force dynamic SSR rendering
 export const dynamic = 'force-dynamic';
 
 export default function HomePage() {
-  const featuredProduct = products[0]; // Apex Pro Headphones
+  const heroPrimary = products[0]; // Apex Pro Headphones
+  const heroSecondary = products[1]; // Chrono Pulse Smartwatch
 
   return (
     <div className="space-y-12">
-      {/* Hero Section */}
-      <section
-        style={{ backgroundColor: '#090d16' }}
-        className="relative overflow-hidden rounded-3xl bg-slate-950 bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 text-white p-6 sm:p-10 lg:p-14 shadow-2xl border border-slate-800"
-      >
+      {/* Main Hero Panel */}
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50 to-teal-50/40 border border-slate-200/90 p-6 sm:p-10 lg:p-12 shadow-sm">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Headline, Description & CTAs */}
+          {/* Left Column: Dark, crisp, readable letters (NOT white) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/30 backdrop-blur-md">
-                <Sparkles className="w-3.5 h-3.5 text-teal-400" />
-                <span>Flagship 2026 Collection</span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-800 border border-teal-200">
+                <ShoppingBag className="w-3.5 h-3.5 text-teal-700" />
+                <span>Online E-Commerce Shop</span>
               </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-slate-800 text-slate-300 border border-slate-700">
-                <Zap className="w-3 h-3 text-teal-400" />
-                SSR Accelerated
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <Sparkles className="w-3 h-3 text-emerald-600" />
+                Flagship Collection
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
-              Precision Gear.{' '}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-300">
-                Built for Creators.
+            {/* Dark crisp headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+              Modern Tech &{' '}
+              <span className="text-teal-600">
+                Lifestyle Essentials.
               </span>
             </h1>
 
-            <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
-              Elevate your daily workstation with studio-grade acoustics, ergonomic workspace peripherals, and minimalist desktop hardware. Enjoy free worldwide express delivery, comprehensive warranty, and instant digital invoices.
+            {/* Dark slate readable description */}
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+              Welcome to <strong>Online E-Commerce Shop</strong>. Discover studio-grade audio, precision workspace peripherals, and smart accessories engineered for everyday performance. Enjoy fast free delivery, comprehensive warranty, and instant downloadable HTML invoices.
             </p>
 
-            {/* Call to Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-1">
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="#catalog"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-teal-500/20 active:scale-95"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm transition-all shadow-md shadow-teal-600/20 active:scale-95 cursor-pointer"
               >
-                <span>Shop Collection</span>
+                <span>Shop All Products</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <Link
                 href="/cart"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-all shadow-xs"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-300 transition-all shadow-xs"
               >
                 <span>View Shopping Cart</span>
               </Link>
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-400">
-              <span className="flex items-center gap-1.5 text-slate-300 font-medium">
-                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                4.9/5 Average Rating
+            <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-600 font-medium">
+              <span className="flex items-center gap-1.5 text-slate-700">
+                <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                <strong>4.9/5</strong> Rating (800+ Reviews)
               </span>
-              <span className="flex items-center gap-1.5 text-slate-300 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
-                Free Express Delivery ($150+)
+              <span className="flex items-center gap-1.5 text-slate-700">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                Free Shipping over $150
               </span>
-              <span className="flex items-center gap-1.5 text-slate-300 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-teal-400" />
-                30-Day Risk-Free Returns
+              <span className="flex items-center gap-1.5 text-slate-700">
+                <CheckCircle2 className="w-4 h-4 text-teal-600" />
+                30-Day Money-Back Guarantee
               </span>
             </div>
           </div>
 
-          {/* Right Column: Hero Featured Product Showcase Card */}
-          <div className="lg:col-span-5">
+          {/* Right Column: Visual Product Showcase Images */}
+          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            {/* Primary Featured Card */}
             <Link
-              href={`/products/${featuredProduct.id}`}
-              className="group block relative rounded-2xl bg-slate-900/90 border border-slate-700/80 p-5 shadow-2xl hover:border-teal-400/60 transition-all backdrop-blur-md"
+              href={`/products/${heroPrimary.id}`}
+              className="group block relative rounded-2xl bg-white border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-teal-400 transition-all"
             >
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
-                <span className="px-2.5 py-1 rounded-full bg-teal-500/10 text-teal-300 font-semibold border border-teal-500/20 flex items-center gap-1">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-2.5">
+                <span className="px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 font-bold text-[11px] border border-teal-200 flex items-center gap-1">
                   <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-                  Staff Pick • Best Seller
+                  Bestseller
                 </span>
-                <span className="text-emerald-400 font-medium">In Stock</span>
+                <span className="text-emerald-700 font-semibold text-xs">In Stock ({heroPrimary.stockCount} left)</span>
               </div>
 
-              {/* Product Visual */}
-              <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-slate-800 border border-slate-700/50 mb-4">
+              <div className="relative aspect-16/10 rounded-xl overflow-hidden bg-slate-100 border border-slate-100 mb-3">
                 <ProductImage
-                  src={featuredProduct.image}
-                  fallbackSrc={featuredProduct.fallbackImage}
-                  alt={featuredProduct.name}
-                  category={featuredProduct.category}
+                  src={heroPrimary.image}
+                  fallbackSrc={heroPrimary.fallbackImage}
+                  alt={heroPrimary.name}
+                  category={heroPrimary.category}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
-              {/* Product Info */}
-              <div className="space-y-1.5">
-                <div className="text-[11px] font-bold text-teal-400 uppercase tracking-wider">
-                  {featuredProduct.category} Series
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-bold text-sm text-slate-900 group-hover:text-teal-600 transition-colors">
+                    {heroPrimary.name}
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-1">{heroPrimary.tagline}</p>
                 </div>
-                <h3 className="font-bold text-lg text-white group-hover:text-teal-300 transition-colors">
-                  {featuredProduct.name}
-                </h3>
-                <p className="text-xs text-slate-400 line-clamp-2">
-                  {featuredProduct.tagline}
-                </p>
-                <div className="pt-3 border-t border-slate-800 flex items-baseline justify-between">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-black text-white">
-                      ${featuredProduct.price.toFixed(2)}
-                    </span>
-                    {featuredProduct.originalPrice && (
-                      <span className="text-xs text-slate-500 line-through">
-                        ${featuredProduct.originalPrice.toFixed(2)}
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-xs font-semibold text-teal-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                    <span>View Product</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                <div className="text-right shrink-0 ml-3">
+                  <span className="text-base font-extrabold text-slate-900 block">
+                    ${heroPrimary.price.toFixed(2)}
                   </span>
+                  <span className="text-[11px] text-teal-600 font-semibold flex items-center gap-0.5 justify-end">
+                    <span>View</span> <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Secondary Featured Card */}
+            <Link
+              href={`/products/${heroSecondary.id}`}
+              className="group flex items-center gap-3.5 rounded-2xl bg-white border border-slate-200/90 p-3 shadow-xs hover:shadow-md hover:border-teal-400 transition-all"
+            >
+              <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-100">
+                <ProductImage
+                  src={heroSecondary.image}
+                  fallbackSrc={heroSecondary.fallbackImage}
+                  alt={heroSecondary.name}
+                  category={heroSecondary.category}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <span className="text-[10px] font-bold text-teal-700 uppercase tracking-wide">
+                  {heroSecondary.category}
+                </span>
+                <h4 className="font-bold text-xs text-slate-900 truncate group-hover:text-teal-600 transition-colors">
+                  {heroSecondary.name}
+                </h4>
+                <div className="flex items-center justify-between mt-1">
+                  <span className="text-xs font-bold text-slate-900">
+                    ${heroSecondary.price.toFixed(2)}
+                  </span>
+                  <span className="text-[11px] text-teal-600 font-medium">Quick Look →</span>
                 </div>
               </div>
             </Link>
           </div>
         </div>
-
-        {/* Decorative Radial Grid BG */}
-        <div className="absolute right-0 top-0 w-2/3 h-full opacity-10 bg-[radial-gradient(#14b8a6_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
       </section>
 
       {/* Highlights Banner */}
@@ -187,13 +202,13 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200/80 pb-4">
           <div>
             <span className="text-xs font-bold text-teal-600 uppercase tracking-wider">
-              Exclusive Hardware
+              Exclusive Catalog
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              Curated Hardware Collection
+              Curated Products Collection
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Explore studio-grade acoustics, ergonomic workspace essentials, and desktop accessories.
+              Explore audio gear, smart wearables, mechanical keyboards, and workspace accessories.
             </p>
           </div>
         </div>

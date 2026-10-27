@@ -14,11 +14,11 @@ export default function Footer() {
                 <Layers className="w-4 h-4" />
               </div>
               <span className="font-bold text-lg text-white">
-                AURA<span className="text-teal-400">.STORE</span>
+                Online <span className="text-teal-400">E-Commerce Shop</span>
               </span>
             </div>
             <p className="text-sm text-slate-400 max-w-sm">
-              High-performance Next.js Server-Side Rendered (SSR) storefront featuring instant HTML delivery, full catalog browsing, interactive cart, seamless checkout, and downloadable HTML invoices.
+              High-performance Server-Side Rendered (SSR) storefront featuring instant catalog browsing, real-time cart, secure checkout, and downloadable HTML invoices.
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
               <span className="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-1.5">
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} AURA Store SSR. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Online E-Commerce Shop. All rights reserved.</p>
           <p>Built with Next.js App Router • Server-Side Rendered • Tailwind CSS</p>
         </div>
       </div>

@@ -14,16 +14,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo & SSR Badge */}
           <div className="flex items-center space-x-3">
-            <Link href="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-400 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
-                <Layers className="w-5 h-5" />
+            <Link href="/" className="flex items-center space-x-2.5 group">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-teal-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform">
+                <ShoppingBag className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-teal-600 transition-colors">
-                  AURA<span className="text-teal-600">.STORE</span>
+                <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 group-hover:text-teal-600 transition-colors">
+                  Online E-Commerce Shop
                 </span>
-                <span className="text-[10px] font-semibold text-slate-400 tracking-wider uppercase -mt-1">
-                  SSR E-Commerce
+                <span className="text-[10px] font-semibold text-teal-600 tracking-wider uppercase -mt-0.5">
+                  Official Store • SSR
                 </span>
               </div>
             </Link>

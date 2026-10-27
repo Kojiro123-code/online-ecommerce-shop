@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="dockBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="60%" stop-color="#141e33"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="anodizedMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="magGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#dockBg)"/>
+  <ellipse cx="400" cy="310" rx="330" ry="220" fill="url(#magGlow)"/>
+
+  <!-- Surface Drop Shadow -->
+  <ellipse cx="400" cy="490" rx="220" ry="24" fill="#000000" opacity="0.8"/>
+
+  <!-- Station Base (Folded/Unfolded 3-Pad Architecture) -->
+  <g transform="translate(400, 340)">
+    <!-- Main Center Base -->
+    <rect x="-240" y="40" width="480" height="70" rx="28" fill="url(#anodizedMetal)" stroke="#64748b" stroke-width="2"/>
+
+    <!-- Left Wing (MagSafe Phone Stand - Raised at 45 degree angle) -->
+    <g transform="translate(-130, -50) rotate(-12)">
+      <!-- Stand Support Leg -->
+      <rect x="-10" y="30" width="20" height="90" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+      <!-- Magnetic Puck Backplate -->
+      <rect x="-70" y="-70" width="140" height="140" rx="30" fill="url(#anodizedMetal)" stroke="#64748b" stroke-width="2"/>
+      <circle cx="0" cy="0" r="48" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+      <circle cx="0" cy="0" r="44" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="8 4"/>
+      <circle cx="0" cy="0" r="14" fill="#06b6d4" opacity="0.2"/>
+      <!-- Qi2 Charging Symbol -->
+      <path d="M 0 -12 L 6 0 L -1 0 L 2 12 L -6 0 L 1 0 Z" fill="#22d3ee"/>
+      <text x="0" y="32" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">15W MagSafe</text>
+    </g>
+
+    <!-- Center Wing (Apple Watch Magnetic Pop-up Charger) -->
+    <g transform="translate(20, -20)">
+      <rect x="-35" y="-35" width="70" height="90" rx="16" fill="url(#anodizedMetal)" stroke="#475569" stroke-width="1.5"/>
+      <!-- Watch Disc -->
+      <circle cx="0" cy="-2" r="26" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+      <circle cx="0" cy="-2" r="16" fill="#f1f5f9"/>
+      <!-- Watch charging symbol -->
+      <circle cx="0" cy="-2" r="5" fill="#10b981"/>
+      <text x="0" y="38" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#94a3b8" text-anchor="middle">5W Watch</text>
+    </g>
+
+    <!-- Right Wing (Earbuds Recessed Indent Pad) -->
+    <g transform="translate(150, 48)">
+      <ellipse cx="0" cy="18" rx="55" ry="24" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+      <ellipse cx="0" cy="18" rx="42" ry="16" fill="#020617"/>
+      <!-- Wireless waves icon -->
+      <circle cx="0" cy="18" r="4" fill="#06b6d4"/>
+      <path d="M -12 18 A 12 6 0 0 1 12 18" stroke="#06b6d4" stroke-width="1.5" fill="none"/>
+      <path d="M -20 18 A 20 10 0 0 1 20 18" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <text x="0" y="34" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#94a3b8" text-anchor="middle">5W Qi Pad</text>
+    </g>
+
+    <!-- Back Power Input Port & Status LED -->
+    <circle cx="-210" cy="75" r="4" fill="#10b981"/>
+    <circle cx="-210" cy="75" r="8" fill="#10b981" opacity="0.3"/>
+    <text x="-195" y="79" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b">POWER ON</text>
+  </g>
+
+  <!-- Badges -->
+  <g transform="translate(60, 50)">
+    <rect width="180" height="34" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5" opacity="0.9"/>
+    <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#22d3ee">4-in-1 Foldable Dock</text>
+  </g>
+
+  <g transform="translate(560, 50)">
+    <rect width="180" height="34" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5" opacity="0.9"/>
+    <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34d399">Qi2 25W Fast Wireless</text>
+  </g>
+</svg>

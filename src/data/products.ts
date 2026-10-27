@@ -270,6 +270,222 @@ export const products: Product[] = [
     },
     inStock: true,
     stockCount: 19
+  },
+  {
+    id: 'prod-011',
+    name: 'Horizon Ultra 34" Curved QD-OLED Monitor',
+    tagline: 'Immersive panoramic QD-OLED workspace display with infinite contrast and 175Hz speed.',
+    price: 899.00,
+    originalPrice: 1099.00,
+    rating: 4.9,
+    reviewCount: 184,
+    category: 'Workspace',
+    image: '/images/products/prod-011.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80',
+    description: 'Transform your creative workflow and desktop experience. Featuring a breathtaking 34-inch 1800R curved Quantum Dot OLED panel with ultra-deep blacks, 0.03ms pixel response time, and 99.3% DCI-P3 cinema color fidelity.',
+    features: [
+      '34" Ultrawide WQHD (3440 x 1440) QD-OLED Panel',
+      '175Hz refresh rate with 0.03ms near-instant response time',
+      '99.3% DCI-P3 cinema color gamut & Factory Calibrated Delta E < 1',
+      'Built-in USB-C 90W Power Delivery Hub with KVM switch'
+    ],
+    specs: {
+      'Screen Size': '34-inch 21:9 Curved 1800R',
+      'Resolution': '3440 x 1440 QD-OLED',
+      'Refresh Rate': '175Hz (AMD FreeSync Premium Pro)',
+      'Ports': 'USB-C (90W PD), 2x HDMI 2.1, 1x DisplayPort 1.4'
+    },
+    inStock: true,
+    stockCount: 14
+  },
+  {
+    id: 'prod-012',
+    name: 'Veloce Aerobuds Pro Wireless Earbuds',
+    tagline: 'Featherlight in-ear Hi-Fi acoustic drivers with next-gen adaptive transparency.',
+    price: 189.99,
+    originalPrice: 229.99,
+    rating: 4.8,
+    reviewCount: 326,
+    category: 'Audio',
+    image: '/images/products/prod-012.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80',
+    description: 'Ultra-low distortion acoustic chamber paired with 11mm custom dual-magnet dynamic drivers. Intelligent hybrid noise cancellation eliminates up to 42dB of environmental distractions with seamless wireless Qi charging case.',
+    features: [
+      'Hybrid Active Noise Cancellation up to 42dB depth',
+      'Personalized Spatial Audio with dynamic gyroscope head tracking',
+      'Up to 36 hours combined listening with wireless charging case',
+      'IP54 dust and splash resistant for sports and outdoor commutes'
+    ],
+    specs: {
+      'Driver Size': '11mm Custom Titanium Dynamic',
+      'Noise Cancellation': '42dB Hybrid ANC + Natural Transparency',
+      'Battery Life': '8h single charge (36h with case)',
+      'Connectivity': 'Bluetooth 5.4 with LDAC & AAC'
+    },
+    inStock: true,
+    stockCount: 28
+  },
+  {
+    id: 'prod-013',
+    name: 'AeroGimbal 3-Axis Cinematic Stabilizer',
+    tagline: 'Ultra-smooth cinematic handheld stabilization with AI magnetic tracking sensor.',
+    price: 149.00,
+    originalPrice: 179.00,
+    rating: 4.7,
+    reviewCount: 163,
+    category: 'Photography',
+    image: '/images/products/prod-013.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
+    description: 'Capture butter-smooth cinematic tracking shots, time-lapses, and vlogs. Equipped with aerospace-grade 3-axis brushless motors, an integrated magnetic AI vision tracking sensor that follows subjects without any phone app, and a built-in bi-color fill light.',
+    features: [
+      'Independent AI magnetic vision sensor with gesture control',
+      '3-Axis motorized orthogonal stabilization with 360° infinite pan',
+      'Built-in foldable extension rod and desktop tripod base',
+      'Integrated magnetic bi-color LED video fill light'
+    ],
+    specs: {
+      'Payload Capacity': 'Up to 300g (supports all modern smartphones)',
+      'Battery Endurance': '18 hours continuous operation',
+      'Weight': '395g ultra-compact folding design',
+      'Charging Time': '2 hours fast USB-C charge'
+    },
+    inStock: true,
+    stockCount: 22
+  },
+  {
+    id: 'prod-014',
+    name: 'Nexus MagDock 4-in-1 Foldable Travel Station',
+    tagline: 'All-in-one wireless magnetic fast charging for phone, watch, and earbuds in an aluminum body.',
+    price: 95.00,
+    originalPrice: 115.00,
+    rating: 4.8,
+    reviewCount: 204,
+    category: 'Accessories',
+    image: '/images/products/prod-014.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=800&q=80',
+    description: 'The ultimate minimalist charging station for your nightstand or travel luggage. Folds completely flat into a pocket-sized aircraft-grade aluminum puck. Charges iPhone, Apple Watch, and AirPods simultaneously with full 15W Qi2 fast charging.',
+    features: [
+      'Certified Qi2 15W wireless magnetic fast charging',
+      'Dedicated Apple Watch fast charging disc',
+      'Recessed Qi pad for AirPods and wireless earbuds',
+      'Precision machined CNC aluminum body with silicone pads'
+    ],
+    specs: {
+      'Total Output': '25W Max simultaneous power delivery',
+      'Dimensions': '110mm x 68mm x 18mm folded',
+      'Weight': '210g solid aluminum alloy',
+      'Included': '65W GaN adapter & braided 2m USB-C cable'
+    },
+    inStock: true,
+    stockCount: 38
+  },
+  {
+    id: 'prod-015',
+    name: 'Aura Ring Gen 3 Smart Health Tracker',
+    tagline: 'Discreet titanium biometric ring delivering clinical-grade sleep and recovery metrics.',
+    price: 299.00,
+    originalPrice: 349.00,
+    rating: 4.9,
+    reviewCount: 275,
+    category: 'Wearables',
+    image: '/images/products/prod-015.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+    description: 'Weighing less than 5 grams, this aerospace titanium smart ring tracks your body’s baseline signals 24/7. Features research-grade sensors for heart rate variability (HRV), sleep staging, skin temperature fluctuations, and daytime stress tracking.',
+    features: [
+      'Medical-grade PPG infrared sensors & dual temperature sensors',
+      'Up to 7 days battery life with fast 30-minute induction dock',
+      'Ultra-durable lightweight Grade 5 titanium with PVD coating',
+      'Water resistant to 100 meters (swimming and shower safe)'
+    ],
+    specs: {
+      'Material': 'Grade 5 Titanium & Non-allergenic inner resin',
+      'Sensors': 'Optical PPG, Skin Temp, 3D Accelerometer',
+      'Battery Life': 'Up to 7 days',
+      'Water Rating': '100m (10 ATM)'
+    },
+    inStock: true,
+    stockCount: 16
+  },
+  {
+    id: 'prod-016',
+    name: 'CarbonEdge Dual-Tier Aluminum Laptop Stand',
+    tagline: 'Rigid featherlight carbon fiber ergonomics with infinite angle ventilation.',
+    price: 119.50,
+    originalPrice: 139.00,
+    rating: 4.7,
+    reviewCount: 118,
+    category: 'Workspace',
+    image: '/images/products/prod-016.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80',
+    description: 'Engineered with real 3K woven carbon fiber and heavy-gauge sandblasted aluminum. The dual-hinge design raises your laptop up to 12 inches to perfect eye-level, eliminating neck stiffness while the slotted base optimizes heat dissipation.',
+    features: [
+      'Aerospace 3K carbon fiber tray with cooling vents',
+      'Ultra-stiff dual damped friction hinges rated for 50,000 cycles',
+      'Supports laptops and tablets from 11" to 17.3" up to 15 lbs',
+      'Folds flat in seconds for easy backpack portability'
+    ],
+    specs: {
+      'Materials': '3K Woven Carbon Fiber & 6000-series Aluminum',
+      'Adjustable Height': '2" to 12" stepless rise',
+      'Weight Capacity': '15 lbs (6.8 kg)',
+      'Dimensions Folded': '10.5" x 9.2" x 1.4"'
+    },
+    inStock: true,
+    stockCount: 30
+  },
+  {
+    id: 'prod-017',
+    name: 'AeroDrone Mini 4K Folding Aerial Quadcopter',
+    tagline: 'Pocket-sized 4K HDR aerial imaging with 38-minute extended flight endurance.',
+    price: 449.00,
+    originalPrice: 529.00,
+    rating: 4.8,
+    reviewCount: 195,
+    category: 'Photography',
+    image: '/images/products/prod-017.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
+    description: 'Weighing under 249 grams to fly without mandatory regulatory registration in most jurisdictions. Captures true vertical and horizontal 4K HDR videos with a mechanical 3-axis gimbal, Level 5 wind resistance, and automated QuickShot cinematics.',
+    features: [
+      'Ultralight sub-249g folding pocket design',
+      '4K @ 60fps HDR video with 48MP high-res raw photo capture',
+      '38 minutes extended flight time per intelligent battery',
+      '10km FHD digital video transmission range'
+    ],
+    specs: {
+      'Takeoff Weight': '248 grams',
+      'Camera Sensor': '1/1.3" CMOS f/1.7 aperture',
+      'Transmission': 'O3+ Low Latency 1080p @ 60fps (10km)',
+      'Wind Resistance': 'Scale 5 (up to 38 km/h)'
+    },
+    inStock: true,
+    stockCount: 11
+  },
+  {
+    id: 'prod-018',
+    name: 'SonicStream Desktop Hi-Fi DAC & Amp',
+    tagline: 'Audiophile-grade lossless decoding with dual ESS Sabre DAC and balanced amplification.',
+    price: 219.00,
+    originalPrice: 269.00,
+    rating: 4.9,
+    reviewCount: 152,
+    category: 'Audio',
+    image: '/images/products/prod-018.svg',
+    fallbackImage: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
+    description: 'Unleash the full potential of your high-impedance headphones. Featuring dual ESS ES9038Q2M DAC chips operating in balanced configuration, paired with THX AAA amplification architecture to deliver crystal-pure sound with 0.0001% THD+N.',
+    features: [
+      'Dual ESS Sabre DAC architecture with 32-bit / 768kHz PCM & DSD512',
+      'THX AAA-788+ balanced amplifier delivering 3000mW output',
+      'Dual headphone outputs: 4.4mm Pentaconn balanced & 6.35mm single-ended',
+      'Precision CNC milled aluminum knob with real-time OLED status display'
+    ],
+    specs: {
+      'DAC Chips': 'Dual ESS Sabre ES9038Q2M',
+      'Max Power Output': '3000mW @ 32Ω (Balanced 4.4mm)',
+      'Inputs': 'USB-C, Optical, Coaxial, Bluetooth LDAC',
+      'Signal-to-Noise': '> 128dB ultra-low floor noise'
+    },
+    inStock: true,
+    stockCount: 17
   }
 ];
 

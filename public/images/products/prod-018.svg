@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="dacBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="60%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="brushedAlum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="30%" stop-color="#4b5563"/>
+      <stop offset="70%" stop-color="#6b7280"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <radialGradient id="volumeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#dacBg)"/>
+  <ellipse cx="400" cy="310" rx="330" ry="220" fill="url(#volumeGlow)"/>
+
+  <!-- Desktop Surface Shadow -->
+  <ellipse cx="400" cy="490" rx="260" ry="26" fill="#000000" opacity="0.85"/>
+
+  <!-- Audiophile DAC & Headphone Amp Chassis -->
+  <g transform="translate(400, 330)">
+    <!-- Main Metal Enclosure Block -->
+    <!-- Top Face (3D Depth) -->
+    <polygon points="-240,40 240,40 210,-40 -210,-40" fill="#1f2937" stroke="#4b5563" stroke-width="1.5"/>
+    <!-- Front Face -->
+    <rect x="-240" y="40" width="480" height="95" rx="8" fill="url(#brushedAlum)" stroke="#6b7280" stroke-width="2"/>
+
+    <!-- Rubber / Brass Isolation Feet Below Base -->
+    <ellipse cx="-200" cy="140" rx="20" ry="6" fill="#ca8a04"/>
+    <ellipse cx="200" cy="140" rx="20" ry="6" fill="#ca8a04"/>
+
+    <!-- Left: Monochrome OLED Screen -->
+    <rect x="-215" y="55" width="135" height="65" rx="6" fill="#030712" stroke="#374151" stroke-width="1.5"/>
+    <!-- OLED Screen Info -->
+    <text x="-205" y="74" font-family="monospace" font-size="11" font-weight="700" fill="#f59e0b">PCM 768kHz</text>
+    <text x="-205" y="90" font-family="monospace" font-size="9" fill="#9ca3af">DSD 512 • USB-IN</text>
+    <!-- VU Meter Wave Bar -->
+    <g fill="#10b981">
+      <rect x="-205" y="102" width="6" height="10" rx="1"/>
+      <rect x="-197" y="98" width="6" height="14" rx="1"/>
+      <rect x="-189" y="94" width="6" height="18" rx="1"/>
+      <rect x="-181" y="90" width="6" height="22" rx="1"/>
+      <rect x="-173" y="94" width="6" height="18" rx="1"/>
+      <rect x="-165" y="98" width="6" height="14" rx="1"/>
+      <rect x="-157" y="104" width="6" height="8" rx="1"/>
+      <rect x="-149" y="106" width="6" height="6" rx="1"/>
+      <rect x="-141" y="102" width="6" height="10" rx="1"/>
+      <rect x="-133" y="100" width="6" height="12" rx="1"/>
+      <rect x="-125" y="96" width="6" height="16" rx="1"/>
+      <rect x="-117" y="92" width="6" height="20" rx="1" fill="#f59e0b"/>
+      <rect x="-109" y="90" width="6" height="22" rx="1" fill="#ef4444"/>
+    </g>
+
+    <!-- Center: Large Knurled Aluminum Volume Dial -->
+    <circle cx="20" cy="88" r="34" fill="#111827" stroke="#d97706" stroke-width="2"/>
+    <circle cx="20" cy="88" r="30" fill="url(#brushedAlum)"/>
+    <circle cx="20" cy="88" r="26" fill="#1f2937" stroke="#4b5563" stroke-width="1"/>
+    <!-- Volume Notch Indicator -->
+    <line x1="20" y1="88" x2="38" y2="70" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="20" cy="88" r="42" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+
+    <!-- Right: Balanced Headphone Jacks -->
+    <!-- 6.35mm Single-Ended Jack (Gold Plated) -->
+    <circle cx="130" cy="88" r="14" fill="#030712" stroke="#eab308" stroke-width="2.5"/>
+    <circle cx="130" cy="88" r="7" fill="#000000"/>
+    <text x="130" y="114" font-family="system-ui, sans-serif" font-size="8" font-weight="700" fill="#9ca3af" text-anchor="middle">6.35mm</text>
+
+    <!-- 4.4mm Pentaconn Balanced Jack (Gold Plated) -->
+    <circle cx="190" cy="88" r="12" fill="#030712" stroke="#eab308" stroke-width="2"/>
+    <circle cx="190" cy="88" r="5" fill="#000000"/>
+    <text x="190" y="114" font-family="system-ui, sans-serif" font-size="8" font-weight="700" fill="#9ca3af" text-anchor="middle">4.4mm BAL</text>
+  </g>
+
+  <!-- Badges -->
+  <g transform="translate(60, 50)">
+    <rect width="180" height="34" rx="8" fill="#111827" stroke="#f59e0b" stroke-width="1.5" opacity="0.9"/>
+    <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Dual ESS Sabre DAC</text>
+  </g>
+
+  <g transform="translate(560, 50)">
+    <rect width="180" height="34" rx="8" fill="#111827" stroke="#10b981" stroke-width="1.5" opacity="0.9"/>
+    <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#34d399">THX AAA • Balanced</text>
+  </g>
+</svg>

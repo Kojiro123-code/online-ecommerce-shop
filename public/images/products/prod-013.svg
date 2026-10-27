@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="gimbalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="gimbalMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27272a"/>
+      <stop offset="50%" stop-color="#52525b"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#gimbalBg)"/>
+  <ellipse cx="400" cy="280" rx="320" ry="220" fill="url(#ringGlow)"/>
+
+  <!-- Shadow below tripod -->
+  <ellipse cx="400" cy="520" rx="160" ry="20" fill="#000000" opacity="0.8"/>
+
+  <!-- Tripod Legs (Bottom) -->
+  <g stroke="#3f3f46" stroke-width="8" stroke-linecap="round">
+    <line x1="400" y1="460" x2="310" y2="520"/>
+    <line x1="400" y1="460" x2="490" y2="520"/>
+    <line x1="400" y1="460" x2="400" y2="525"/>
+  </g>
+
+  <!-- Gimbal Handle -->
+  <rect x="382" y="310" width="36" height="155" rx="18" fill="url(#gimbalMetal)" stroke="#52525b" stroke-width="2"/>
+  <rect x="386" y="325" width="28" height="60" rx="6" fill="#18181b"/>
+
+  <!-- Joystick and Control Buttons -->
+  <circle cx="400" cy="342" r="8" fill="#52525b" stroke="#71717a" stroke-width="1.5"/>
+  <circle cx="400" cy="342" r="4" fill="#27272a"/>
+  <!-- Record Button (Red Dot) -->
+  <circle cx="394" cy="368" r="4" fill="#e11d48"/>
+  <circle cx="406" cy="368" r="4" fill="#71717a"/>
+  <!-- Status LEDs -->
+  <rect x="393" y="395" width="14" height="2" fill="#10b981"/>
+  <rect x="393" y="400" width="14" height="2" fill="#10b981"/>
+
+  <!-- Pan Motor Axis (Rotate Base) -->
+  <rect x="376" y="275" width="48" height="36" rx="8" fill="url(#gimbalMetal)" stroke="#52525b" stroke-width="2"/>
+  <!-- Accent Red Anodized Ring -->
+  <rect x="376" y="290" width="48" height="4" fill="#f43f5e"/>
+
+  <!-- Curved Gimbal Arm (Connecting Pan to Roll) -->
+  <path d="M 400 275 L 400 220 Q 400 180 470 180 L 510 180" fill="none" stroke="url(#gimbalMetal)" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Roll Motor -->
+  <circle cx="510" cy="180" r="22" fill="url(#gimbalMetal)" stroke="#52525b" stroke-width="2"/>
+  <circle cx="510" cy="180" r="14" fill="#18181b"/>
+  <circle cx="510" cy="180" r="6" fill="#f43f5e"/>
+
+  <!-- Tilt Motor Arm (Connecting Roll to Tilt Axis) -->
+  <path d="M 510 180 L 460 180 Q 430 180 430 140" fill="none" stroke="url(#gimbalMetal)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Smartphone Mount with Clamped Phone -->
+  <!-- Clamps -->
+  <rect x="290" y="115" width="220" height="135" rx="16" fill="#09090b" stroke="#3f3f46" stroke-width="3"/>
+  <!-- Smartphone Screen (Bezel-less recording screen) -->
+  <rect x="296" y="121" width="208" height="123" rx="12" fill="#18181b"/>
+
+  <!-- Camera viewfinder graphic -->
+  <rect x="340" y="138" width="120" height="90" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <circle cx="400" cy="183" r="12" fill="none" stroke="#f43f5e" stroke-width="1.5"/>
+  <circle cx="400" cy="183" r="3" fill="#f43f5e"/>
+
+  <!-- Viewfinder UI overlay -->
+  <text x="308" y="140" font-family="monospace" font-size="10" fill="#10b981">4K 60FPS</text>
+  <text x="460" y="140" font-family="monospace" font-size="10" fill="#f43f5e">● REC</text>
+  <text x="308" y="235" font-family="monospace" font-size="10" fill="#a1a1aa">AI TRACK ON</text>
+  <text x="450" y="235" font-family="monospace" font-size="10" fill="#38bdf8">ISO 200</text>
+
+  <!-- Fill Light on top of mount -->
+  <rect x="375" y="98" width="50" height="18" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="380" y="102" width="40" height="10" rx="3" fill="#fef08a" opacity="0.85"/>
+
+  <!-- Badges -->
+  <g transform="translate(60, 50)">
+    <rect width="180" height="34" rx="8" fill="#18181b" stroke="#f43f5e" stroke-width="1.5" opacity="0.9"/>
+    <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#fb7185">3-Axis Motorized Gimbal</text>
+  </g>
+
+  <g transform="translate(560, 50)">
+    <rect width="180" height="34" rx="8" fill="#18181b" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+    <text x="14" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#7dd3fc">AI Magnetic Tracking</text>
+  </g>
+</svg>

@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 export default function HomePage() {
   return (
     <div className="space-y-10">
-      {/* Automatic Random Product Slider with description next to product image */}
+      {/* Featured Products Image Slider with Comprehensive Product Details & Image Showcase */}
       <HeroSlider products={products} />
 
       {/* Highlights Strip */}
@@ -67,7 +67,7 @@ export default function HomePage() {
               Curated Products Collection
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Explore audio gear, smart wearables, mechanical keyboards, and workspace accessories.
+              Explore audio gear, curved QD-OLED displays, smart wearables, aerial drones, and workspace accessories.
             </p>
           </div>
         </div>

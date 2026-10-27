@@ -208,7 +208,7 @@ export default function ProductDetailPage({ params }: Props) {
             More From Our Curated Collection
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Other high-performance items in the 10-piece sample dataset
+            Other high-performance items from our premium curated collection
           </p>
         </div>
 

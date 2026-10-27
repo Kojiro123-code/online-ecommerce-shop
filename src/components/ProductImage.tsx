@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Package, Headphones, Watch, Keyboard, Mouse, Camera, Mic, LayoutGrid, Sun, BatteryCharging, Speaker } from 'lucide-react';
 
 interface ProductImageProps {
@@ -21,6 +21,13 @@ export default function ProductImage({
   const [imgSrc, setImgSrc] = useState<string>(src);
   const [hasError, setHasError] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+  // Sync state whenever the src prop changes (e.g. on carousel/slider transitions)
+  useEffect(() => {
+    setImgSrc(src);
+    setHasError(false);
+    setIsLoaded(false);
+  }, [src]);
 
   const handleError = () => {
     if (fallbackSrc && imgSrc !== fallbackSrc) {

@@ -10,7 +10,8 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 342,
     category: 'Audio',
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
+    image: '/images/products/prod-001.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80',
     description: 'Immerse yourself in rich, high-resolution audio with custom 40mm beryllium drivers. Built-in hybrid active noise cancellation eliminates ambient distractions, while memory foam ear cushions provide all-day ergonomic comfort.',
     features: [
       'Active Noise Cancellation with Transparency Mode',
@@ -36,7 +37,8 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 215,
     category: 'Wearables',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+    image: '/images/products/prod-002.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
     description: 'Track cardiovascular metrics, sleep stages, and workout intensity with medical-grade precision. Features a vivid 1.43-inch AMOLED display visible under direct sunlight and a 7-day battery life.',
     features: [
       'Always-on 1.43" AMOLED display (1000 nits)',
@@ -62,7 +64,8 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 512,
     category: 'Workspace',
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80',
+    image: '/images/products/prod-003.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80',
     description: 'Designed for discerning typists and programmers. Hot-swappable PCB, factory-lubed linear switches, and sound-dampening silicone gaskets deliver an ultra-smooth, creamy typing acoustic profile.',
     features: [
       'Gasket-mounted acoustic dampening architecture',
@@ -88,7 +91,8 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 178,
     category: 'Workspace',
-    image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80',
+    image: '/images/products/prod-004.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80',
     description: 'A 57-degree vertical tilt relieves wrist strain and reduces muscle fatigue during extended work sessions. Equipped with a 26,000 DPI optical sensor and whisper-quiet tactile switches.',
     features: [
       '57-degree natural handshake ergonomic angle',
@@ -114,10 +118,11 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 135,
     category: 'Photography',
-    image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80',
-    description: 'Crystal-clear 4K video at 60 FPS powered by a Sony STARVIS sensor. Advanced low-light auto-correction and dual noise-cancelling beamforming microphones ensure professional video conferencing.',
+    image: '/images/products/prod-005.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
+    description: 'Crystal-clear 4K video at 60 FPS powered by a high-grade optical sensor. Advanced low-light auto-correction and dual noise-cancelling beamforming microphones ensure professional video conferencing.',
     features: [
-      'Native 4K UHD @ 60 FPS with Sony STARVIS CMOS',
+      'Native 4K UHD @ 60 FPS with glass optical elements',
       'Intelligent AI auto-framing and focus tracking',
       'Dual beamforming mics with echo cancellation',
       'Integrated magnetic physical privacy shutter'
@@ -125,7 +130,7 @@ export const products: Product[] = [
     specs: {
       'Resolution': '4K @ 60fps / 1080p @ 120fps',
       'Field of View': '90° Adjustable Wide Angle',
-      'Sensor': 'Sony 1/2.8" STARVIS CMOS',
+      'Sensor': '1/2.8" Low-Noise Optical CMOS',
       'Mount': 'Universal monitor clip & 1/4" tripod'
     },
     inStock: true,
@@ -140,7 +145,8 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 288,
     category: 'Audio',
-    image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80',
+    image: '/images/products/prod-006.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80',
     description: 'Engineered for podcasting, vocal recording, and live streaming. Cardioid polar pattern isolates your voice while rejecting background keyboard and room noise. Supports direct USB-C and professional XLR outputs.',
     features: [
       'Dual output: Plug-and-play USB-C and professional XLR',
@@ -166,7 +172,8 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 94,
     category: 'Workspace',
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80',
+    image: '/images/products/prod-007.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80',
     description: 'Elevate your monitors to ergonomic eye height while organizing keyboard, notebook, and desktop essentials. Made from sustainably harvested solid walnut and heavy-gauge powder-coated steel legs.',
     features: [
       '100% Solid American Walnut with organic matte finish',
@@ -192,7 +199,8 @@ export const products: Product[] = [
     rating: 4.7,
     reviewCount: 165,
     category: 'Accessories',
-    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80',
+    image: '/images/products/prod-008.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80',
     description: 'Custom optical design illuminates your desk without causing screen reflections or glare. Wireless desktop dial allows stepless adjustment of brightness and color temperature from warm to cool daylight.',
     features: [
       'Zero screen glare asymmetrical optical design',
@@ -218,7 +226,8 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 310,
     category: 'Accessories',
-    image: 'https://images.unsplash.com/photo-1609592426815-5e6e30129a2d?w=800&q=80',
+    image: '/images/products/prod-009.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=800&q=80',
     description: 'Power laptops, phones, and accessories on the move. Features a 15W Qi2/MagSafe wireless charging pad on top, plus dual USB-C ports delivering 65W Power Delivery to recharge a MacBook Pro from 0 to 50% in 30 minutes.',
     features: [
       'Strong 12N magnetic alignment for iPhone & Qi2 devices',
@@ -244,7 +253,8 @@ export const products: Product[] = [
     rating: 4.9,
     reviewCount: 147,
     category: 'Audio',
-    image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&q=80',
+    image: '/images/products/prod-010.jpg',
+    fallbackImage: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&q=80',
     description: 'Equipped with quad opposing drivers and dual passive radiators, the SoundSphere distributes balanced 360-degree high-fidelity audio to every corner of the room. Robust IPX7 waterproof enclosure for indoor and outdoor versatility.',
     features: [
       'Omnidirectional 360° acoustic projection',
@@ -275,4 +285,3 @@ export function getRelatedProducts(currentId: string, limit = 3): Product[] {
     .concat(products.filter(p => p.id !== currentId && p.category !== current.category))
     .slice(0, limit);
 }
-

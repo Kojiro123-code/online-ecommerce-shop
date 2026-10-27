@@ -8,6 +8,7 @@ export interface Product {
   reviewCount: number;
   category: 'Audio' | 'Wearables' | 'Workspace' | 'Photography' | 'Accessories';
   image: string;
+  fallbackImage?: string;
   description: string;
   features: string[];
   specs: {

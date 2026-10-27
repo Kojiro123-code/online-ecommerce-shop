@@ -6,6 +6,7 @@ import { useCart } from '../context/CartContext';
 import { OrderCustomer } from '../types';
 import { ShieldCheck, CreditCard, Banknote, Building2, Lock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import ProductImage from './ProductImage';
 
 export default function CheckoutForm() {
   const router = useRouter();
@@ -280,12 +281,15 @@ export default function CheckoutForm() {
           <div className="max-h-60 overflow-y-auto space-y-3 pr-1 divide-y divide-slate-100">
             {items.map(({ product, quantity }) => (
               <div key={product.id} className="pt-3 first:pt-0 flex items-center gap-3">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-12 h-12 rounded-lg object-cover bg-slate-100 shrink-0 border border-slate-200/60"
-                />
+                <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-100 shrink-0 border border-slate-200/60">
+                  <ProductImage
+                    src={product.image}
+                    fallbackSrc={product.fallbackImage}
+                    alt={product.name}
+                    category={product.category}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="min-w-0 flex-1">
                   <h4 className="text-xs font-bold text-slate-900 truncate">
                     {product.name}

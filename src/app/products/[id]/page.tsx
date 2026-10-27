@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { getProductById, getRelatedProducts } from '../../../data/products';
 import AddToCartButton from '../../../components/AddToCartButton';
 import ProductCard from '../../../components/ProductCard';
+import ProductImage from '../../../components/ProductImage';
 import { Star, ShieldCheck, Truck, RotateCcw, ArrowLeft, Check, Sparkles } from 'lucide-react';
 
 interface Props {
@@ -58,10 +59,11 @@ export default function ProductDetailPage({ params }: Props) {
         {/* Product Image Gallery Column */}
         <div className="lg:col-span-6 space-y-4">
           <div className="relative aspect-4/3 rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-sm group">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <ProductImage
               src={product.image}
+              fallbackSrc={product.fallbackImage}
               alt={product.name}
+              category={product.category}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
             />
             <div className="absolute top-4 left-4 flex gap-2">

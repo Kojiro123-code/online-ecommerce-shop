@@ -2,19 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 import { Product } from '../types';
 import AddToCartButton from './AddToCartButton';
+import ProductImage from './ProductImage';
 import { Star, ArrowRight } from 'lucide-react';
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group flex flex-col bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-teal-200 transition-all duration-300 overflow-hidden">
       {/* Product Image & Link */}
-      <Link href={`/products/${product.id}`} className="relative aspect-4/3 overflow-hidden bg-slate-100">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+      <Link href={`/products/${product.id}`} className="relative aspect-4/3 overflow-hidden bg-slate-100 block">
+        <ProductImage
           src={product.image}
+          fallbackSrc={product.fallbackImage}
           alt={product.name}
+          category={product.category}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-          loading="lazy"
         />
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
           <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-white/90 backdrop-blur-md text-slate-800 shadow-xs">

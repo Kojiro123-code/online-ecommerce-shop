@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useCart } from '../context/CartContext';
+import ProductImage from './ProductImage';
 import { Trash2, Plus, Minus, ArrowRight, ShoppingBag, ShieldCheck, Truck } from 'lucide-react';
 
 export default function CartList() {
@@ -75,12 +76,13 @@ export default function CartList() {
               <div className="flex items-center gap-4 w-full sm:col-span-6">
                 <Link
                   href={`/products/${product.id}`}
-                  className="w-20 h-20 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200/60"
+                  className="w-20 h-20 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200/60 block"
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <ProductImage
                     src={product.image}
+                    fallbackSrc={product.fallbackImage}
                     alt={product.name}
+                    category={product.category}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                   />
                 </Link>

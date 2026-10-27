@@ -1,108 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="900" height="650" fill="none">
   <defs>
-    <!-- Cyan Neon Accent Glow -->
-    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Cyan Neon Accent -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#0284c7"/>
       <stop offset="100%" stop-color="#0369a1"/>
     </linearGradient>
 
-    <!-- Purple/Magenta Glow -->
-    <linearGradient id="magentaGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Deep Tech Violet / Magenta -->
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="50%" stop-color="#c026d3"/>
+      <stop offset="40%" stop-color="#c026d3"/>
       <stop offset="100%" stop-color="#7e22ce"/>
     </linearGradient>
 
-    <!-- Dark Carbon Fiber & Matte Plates -->
-    <linearGradient id="darkArmor" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Dark Titanium Panels -->
+    <linearGradient id="darkArmorPlate" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#334155"/>
       <stop offset="50%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090d16"/>
     </linearGradient>
 
-    <linearGradient id="soleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Sole Gradient -->
+    <linearGradient id="roboticSole" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="60%" stop-color="#090d16"/>
       <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
 
-    <!-- Soft Ambient Light -->
-    <radialGradient id="lightAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-
-    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <!-- Subtle Lighting Highlights -->
+    <filter id="neonReflect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Transparent / Ambient Canvas -->
-  <ellipse cx="400" cy="300" rx="350" ry="250" fill="url(#lightAura)"/>
-
-  <!-- Futuristic Sneaker (Angled 3D Isometric Float) -->
-  <g transform="translate(140, 60) rotate(-4 260 220)">
-    <!-- Heel Collar & Pull Tab -->
-    <path d="M 170 120 L 190 70 L 220 85 L 205 135 Z" fill="#090d16" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M 195 80 L 210 90" stroke="#f43f5e" stroke-width="3" stroke-linecap="round"/>
+  <!-- Angled Sneaker (Tilted ~28° pointing toward bottom-right, matching reference image) -->
+  <g transform="translate(450, 310) rotate(26) translate(-450, -310)">
+    <!-- Heel Collar & Pull Ring -->
+    <path d="M 230 140 L 260 70 L 305 90 L 280 160 Z" fill="#090d16" stroke="#38bdf8" stroke-width="2.5"/>
+    <path d="M 265 80 L 290 95" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
 
     <!-- High-Top Ankle Collar Wrap -->
-    <path d="M 160 140 Q 200 110 260 140 L 270 210 L 140 210 Z" fill="url(#darkArmor)" stroke="#475569" stroke-width="2"/>
-    <circle cx="170" cy="180" r="10" fill="#a855f7" filter="url(#neonBlur)" opacity="0.8"/>
-    <circle cx="170" cy="180" r="5" fill="#ffffff"/>
+    <path d="M 220 170 Q 280 120 370 160 L 380 250 L 200 240 Z" fill="url(#darkArmorPlate)" stroke="#475569" stroke-width="2.5"/>
+    <circle cx="235" cy="210" r="14" fill="#a855f7" filter="url(#neonReflect)" opacity="0.85"/>
+    <circle cx="235" cy="210" r="7" fill="#ffffff"/>
 
-    <!-- Tongue & Cyber Lacing System -->
-    <path d="M 230 140 L 330 200 L 305 240 L 220 180 Z" fill="#0f172a"/>
-    <!-- Neon Laces -->
-    <line x1="240" y1="165" x2="270" y2="155" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
-    <line x1="260" y1="185" x2="290" y2="175" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
-    <line x1="280" y1="205" x2="310" y2="195" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
-    <line x1="300" y1="225" x2="330" y2="215" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+    <!-- Cyber Lacing Architecture -->
+    <path d="M 330 160 L 460 230 L 430 290 L 310 220 Z" fill="#090d16"/>
+    <!-- Glowing Cyan Laces -->
+    <line x1="345" y1="190" x2="385" y2="180" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="370" y1="215" x2="415" y2="205" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="395" y1="240" x2="445" y2="230" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <line x1="420" y1="265" x2="475" y2="255" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
 
     <!-- Main Upper Body Shell (Angular Armored Facets) -->
-    <path d="M 130 220 Q 200 210 290 230 L 440 330 Q 480 370 510 390 L 480 430 Q 380 410 300 420 L 120 370 Q 100 290 130 220 Z" 
-          fill="url(#cyanNeon)" stroke="#e0f2fe" stroke-width="2"/>
+    <path d="M 180 250 Q 280 235 390 260 L 610 390 Q 660 440 700 460 L 660 510 Q 520 480 400 495 L 160 440 Q 140 340 180 250 Z" 
+          fill="url(#cyanGrad)" stroke="#e0f2fe" stroke-width="3"/>
 
     <!-- Geometric Facet Overlays (Cyber-Armor Panels) -->
-    <polygon points="150,235 240,230 270,300 160,310" fill="url(#darkArmor)" stroke="#38bdf8" stroke-width="1.5"/>
-    <polygon points="250,230 330,240 360,320 280,310" fill="#090d16" stroke="#475569" stroke-width="1.5"/>
-    <polygon points="340,245 420,320 380,360 320,310" fill="url(#darkArmor)" stroke="#0284c7" stroke-width="1.5"/>
+    <polygon points="200,270 330,265 370,355 220,365" fill="url(#darkArmorPlate)" stroke="#38bdf8" stroke-width="2"/>
+    <polygon points="340,265 460,275 490,380 380,365" fill="#090d16" stroke="#475569" stroke-width="2"/>
+    <polygon points="470,285 580,380 520,430 440,370" fill="url(#darkArmorPlate)" stroke="#0284c7" stroke-width="2"/>
 
-    <!-- Toe Cap (Aerodynamic & Sharp) -->
-    <path d="M 420 320 L 520 390 Q 530 405 510 425 L 440 420 Z" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M 460 370 Q 490 390 500 405" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- Aerodynamic Sculpted Toe Cap -->
+    <path d="M 580 375 L 710 460 Q 725 480 700 505 L 600 495 Z" fill="#0284c7" stroke="#38bdf8" stroke-width="2.5"/>
+    <path d="M 630 435 Q 675 460 690 480" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.75"/>
 
-    <!-- Magenta Exhaust Vents / Airbag Module in Midsole -->
-    <g transform="translate(180, 310)">
-      <polygon points="0,0 70,-10 65,35 -5,40" fill="#090d16" stroke="#a855f7" stroke-width="2"/>
-      <rect x="15" y="5" width="38" height="18" rx="4" fill="url(#magentaGlow)" filter="url(#neonBlur)"/>
-      <rect x="18" y="8" width="32" height="12" rx="2" fill="#ffffff" opacity="0.9"/>
+    <!-- Magenta Cyber Airbag Module in Midsole -->
+    <g transform="translate(260, 365)">
+      <polygon points="0,0 95,-15 90,48 -10,55" fill="#090d16" stroke="#a855f7" stroke-width="2.5"/>
+      <rect x="20" y="8" width="55" height="24" rx="5" fill="url(#purpleGlow)" filter="url(#neonReflect)"/>
+      <rect x="25" y="12" width="45" height="16" rx="3" fill="#ffffff" opacity="0.9"/>
       <!-- Glowing Power Nodes -->
-      <circle cx="25" cy="14" r="2" fill="#f43f5e"/>
-      <circle cx="35" cy="14" r="2" fill="#f43f5e"/>
-      <circle cx="45" cy="14" r="2" fill="#f43f5e"/>
+      <circle cx="35" cy="20" r="3" fill="#f43f5e"/>
+      <circle cx="48" cy="20" r="3" fill="#f43f5e"/>
+      <circle cx="61" cy="20" r="3" fill="#f43f5e"/>
     </g>
 
-    <!-- Futuristic Sculpted Robotic Sole Unit -->
-    <!-- Rear Heel Outrigger -->
-    <polygon points="80,350 140,350 130,410 60,400" fill="url(#soleGrad)" stroke="#38bdf8" stroke-width="2"/>
-    <!-- Floating Heel Fin -->
-    <polygon points="60,400 110,405 90,430 40,410" fill="#020617" stroke="#0ea5e9" stroke-width="1.5"/>
+    <!-- Robotic Modular Sole Platform -->
+    <!-- Rear Outrigger Fin -->
+    <polygon points="120,410 200,410 180,485 90,470" fill="url(#roboticSole)" stroke="#38bdf8" stroke-width="2.5"/>
+    <polygon points="90,470 150,475 130,510 60,485" fill="#020617" stroke="#0ea5e9" stroke-width="2"/>
 
-    <!-- Main Midsole Platform with Teeth & Tread -->
-    <path d="M 120 370 L 260 395 L 340 410 L 460 425 L 510 435 L 480 470 L 360 460 L 260 450 L 110 430 Z" 
-          fill="url(#soleGrad)" stroke="#334155" stroke-width="2.5"/>
+    <!-- Main Midsole Platform with Heavy Robotic Grip Teeth -->
+    <path d="M 170 435 L 360 465 L 470 485 L 630 505 L 700 520 L 660 560 L 500 550 L 360 535 L 150 510 Z" 
+          fill="url(#roboticSole)" stroke="#334155" stroke-width="3"/>
 
-    <!-- Outsole Bottom Grip Blocks -->
-    <polygon points="120,432 170,438 160,455 110,448" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
-    <polygon points="200,442 270,449 260,466 190,458" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
-    <polygon points="320,455 400,462 390,480 310,472" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
-    <polygon points="430,465 480,470 470,485 420,480" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+    <!-- Bottom Cleats & Tread Blocks -->
+    <polygon points="170,512 240,520 225,542 155,532" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <polygon points="280,526 370,535 355,556 265,546" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <polygon points="440,542 540,550 525,572 425,562" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <polygon points="580,552 650,560 635,580 565,572" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
 
-    <!-- Glowing Cyber Inscription / Tech Branding along lower plate -->
-    <path d="M 320 375 L 420 400" stroke="#38bdf8" stroke-width="3" stroke-dasharray="8 4" stroke-linecap="round"/>
-    <polygon points="435,404 445,407 435,410" fill="#38bdf8"/>
+    <!-- Cyan Circuit Line Inscription -->
+    <path d="M 440 440 L 580 475" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="10 5" stroke-linecap="round"/>
+    <polygon points="600,480 615,484 600,488" fill="#38bdf8"/>
   </g>
 </svg>

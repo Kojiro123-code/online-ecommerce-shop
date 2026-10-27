@@ -9,6 +9,7 @@ interface ProductImageProps {
   alt: string;
   className?: string;
   category?: string;
+  containerClassName?: string;
 }
 
 export default function ProductImage({
@@ -17,6 +18,7 @@ export default function ProductImage({
   alt,
   className = '',
   category,
+  containerClassName,
 }: ProductImageProps) {
   const [imgSrc, setImgSrc] = useState<string>(src);
   const [hasError, setHasError] = useState<boolean>(false);
@@ -76,9 +78,9 @@ export default function ProductImage({
   }
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-slate-100 flex items-center justify-center">
+    <div className={`relative w-full h-full flex items-center justify-center ${containerClassName !== undefined ? containerClassName : 'overflow-hidden bg-slate-100'}`}>
       {/* Skeleton while loading */}
-      {!isLoaded && (
+      {!isLoaded && !containerClassName?.includes('bg-transparent') && (
         <div className="absolute inset-0 bg-slate-200 animate-pulse" />
       )}
 

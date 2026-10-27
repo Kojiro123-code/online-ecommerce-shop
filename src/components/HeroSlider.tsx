@@ -196,15 +196,15 @@ export default function HeroSlider({ products }: HeroSliderProps) {
             className="block relative group focus:outline-hidden"
             title={`View details for ${current.name}`}
           >
-            <div className="w-72 sm:w-96 md:w-[440px] lg:w-[500px] aspect-4/3 flex items-center justify-center animate-hero-float">
+            <div className="w-72 sm:w-96 md:w-[440px] lg:w-[480px] aspect-4/3 flex items-center justify-center animate-hero-float rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900/30 backdrop-blur-xs">
               <ProductImage
                 key={current.id}
                 src={current.image}
                 fallbackSrc={current.fallbackImage}
                 alt={current.name}
                 category={current.category}
-                containerClassName="bg-transparent"
-                className="w-full h-full object-contain filter drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)] group-hover:scale-105 transition-transform duration-500 ease-out"
+                containerClassName="bg-transparent w-full h-full"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
               />
             </div>
 

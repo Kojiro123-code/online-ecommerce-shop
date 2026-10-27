@@ -496,7 +496,7 @@ export const products: Product[] = [
     rating: 5.0,
     reviewCount: 428,
     category: 'Wearables',
-    image: '/images/products/prod-019.svg',
+    image: '/images/products/prod-019.jpg',
     fallbackImage: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80',
     description: 'A revolutionary cybernetic sneaker designed with pneumatic adaptive cushioning, glowing fiber-optic accents, and aerospace carbon-fiber architecture for unmatched street performance and mind-blowing visuals.',
     features: [

@@ -146,7 +146,7 @@ git add .
 git commit -m "feat: complete SSR e-commerce storefront with 10 sample products and HTML invoice"
 
 # Link to your remote GitHub repository
-git remote set-url origin https://github.com/Kojiro123-code/E-Com.git
+git remote set-url origin https://github.com/Kojiro123-code/online-ecommerce-shop.git
 git push -u origin main
 \`\`\`
 

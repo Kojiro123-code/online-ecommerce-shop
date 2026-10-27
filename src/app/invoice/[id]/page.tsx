@@ -12,8 +12,8 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
-    title: `Invoice #${params.id} (.html) | AURA Store (SSR)`,
-    description: `Official order confirmation and downloadable HTML invoice for order #${params.id}`,
+    title: `Receipt #${params.id} | Online Atelier`,
+    description: `Official order confirmation and proof of acquisition for receipt #${params.id}`,
   };
 }
 

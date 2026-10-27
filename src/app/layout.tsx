@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="antialiased flex flex-col min-h-screen bg-[#08080a] text-zinc-100 selection:bg-amber-400 selection:text-black">
         {/* Subtle Ambient Background Lighting Glows */}
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="no-print print:hidden fixed inset-0 pointer-events-none z-0 overflow-hidden">
           <div className="absolute -top-40 left-1/4 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[140px]" />
           <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[140px]" />
           <div className="absolute bottom-10 left-10 w-[600px] h-[600px] bg-amber-400/5 rounded-full blur-[160px]" />
@@ -26,13 +26,13 @@ export default function RootLayout({
 
         <CartProvider>
           <div className="relative z-10 flex flex-col min-h-screen">
-            <div className="no-print">
+            <div className="no-print print:hidden">
               <Navbar />
             </div>
             <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
               {children}
             </main>
-            <div className="no-print">
+            <div className="no-print print:hidden">
               <Footer />
             </div>
           </div>

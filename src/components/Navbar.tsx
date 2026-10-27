@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Luxury Concierge Ticker */}
-      <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-b border-white/5 py-1.5 px-4 text-center">
+      <div className="no-print print:hidden bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-b border-white/5 py-1.5 px-4 text-center">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-3 text-[11px] font-medium tracking-[0.2em] text-zinc-400 uppercase">
           <span className="hidden sm:inline-flex items-center gap-1.5 text-amber-400/90 font-semibold">
             <Sparkles className="w-3 h-3 text-amber-400" />
@@ -29,7 +29,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Luxury Header */}
-      <header className="sticky top-0 z-50 bg-[#08080a]/85 backdrop-blur-xl border-b border-white/10 transition-all">
+      <header className="no-print print:hidden sticky top-0 z-50 bg-[#08080a]/85 backdrop-blur-xl border-b border-white/10 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Brand Logo & Maison Title */}

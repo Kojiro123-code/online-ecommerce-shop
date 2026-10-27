@@ -7,7 +7,7 @@ import { Sparkles, ShieldCheck, Zap, Globe, Github, Mail, ArrowRight } from 'luc
 
 export default function Footer() {
   return (
-    <footer className="mt-24 bg-[#050507] text-zinc-400 border-t border-white/10">
+    <footer className="no-print print:hidden mt-24 bg-[#050507] text-zinc-400 border-t border-white/10">
       {/* VIP Atelier Newsletter Strip */}
       <div className="border-b border-white/10 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">

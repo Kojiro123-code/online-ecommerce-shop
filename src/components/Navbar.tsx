@@ -35,11 +35,11 @@ export default function Navbar() {
             <div className="flex items-center space-x-3.5">
               <Link href="/" className="flex items-center space-x-3 group">
                 {/* Gold Monogram Badge */}
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 via-amber-400 to-yellow-200 flex items-center justify-center text-black font-serif font-black text-xl shadow-[0_0_25px_rgba(245,158,11,0.3)] group-hover:scale-105 group-hover:shadow-[0_0_35px_rgba(245,158,11,0.5)] transition-all">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 via-amber-400 to-yellow-200 flex items-center justify-center text-black font-black text-xl shadow-[0_0_25px_rgba(245,158,11,0.3)] group-hover:scale-105 group-hover:shadow-[0_0_35px_rgba(245,158,11,0.5)] transition-all">
                   <span>É</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-serif font-bold text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-300 transition-colors">
+                  <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-300 transition-colors">
                     ONLINE <span className="text-amber-400 font-sans tracking-widest text-xs uppercase ml-1 px-1.5 py-0.5 rounded-sm bg-amber-400/10 border border-amber-400/30">ATELIER</span>
                   </span>
                   <span className="text-[10px] font-semibold text-zinc-400 tracking-[0.25em] uppercase -mt-0.5">

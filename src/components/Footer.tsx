@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="text-[10px] font-bold tracking-[0.25em] text-amber-400 uppercase">
               PRIVATE CLIENT CONCIERGE
             </span>
-            <h3 className="font-serif text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-2xl font-bold text-white tracking-tight">
               Join the Private Atelier Circle
             </h3>
             <p className="text-xs text-zinc-400 font-light">
@@ -47,10 +47,10 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-black font-serif font-black text-lg shadow-[0_0_20px_rgba(245,158,11,0.25)]">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-black font-black text-lg shadow-[0_0_20px_rgba(245,158,11,0.25)]">
                 É
               </div>
-              <span className="font-serif font-bold text-xl text-white">
+              <span className="font-bold text-xl text-white">
                 ONLINE <span className="text-amber-400 font-sans tracking-widest text-xs uppercase px-1.5 py-0.5 rounded-sm bg-amber-400/10 border border-amber-400/30">ATELIER</span>
               </span>
             </div>

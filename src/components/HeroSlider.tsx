@@ -234,7 +234,7 @@ export default function HeroSlider({ products }: HeroSliderProps) {
             </div>
           </div>
 
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-white tracking-tight">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight">
             {current.name}
           </h2>
 

@@ -59,7 +59,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
         {/* Title & Tagline */}
         <Link href={`/products/${product.id}`} className="group-hover:text-amber-300 transition-colors">
-          <h3 className="font-serif font-bold text-white line-clamp-1 text-lg tracking-tight">
+          <h3 className="font-bold text-white line-clamp-1 text-lg tracking-tight">
             {product.name}
           </h3>
         </Link>

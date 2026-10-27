@@ -28,7 +28,7 @@ export default function CheckoutForm() {
   if (items.length === 0) {
     return (
       <div className="bg-zinc-900/50 backdrop-blur-xl rounded-[2.5rem] border border-white/10 p-16 text-center max-w-lg mx-auto shadow-2xl">
-        <h2 className="font-serif text-2xl font-bold text-white mb-2">No Pieces to Acquire</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">No Pieces to Acquire</h2>
         <p className="text-xs text-zinc-400 mb-6 font-light">
           Your private cart is empty. Please select archive pieces before initiating concierge acquisition.
         </p>
@@ -64,7 +64,7 @@ export default function CheckoutForm() {
       <div className="lg:col-span-7 space-y-6">
         {/* Contact & Shipping */}
         <div className="bg-zinc-900/60 backdrop-blur-md rounded-3xl border border-white/10 p-6 sm:p-7 shadow-xl space-y-5">
-          <h2 className="font-serif text-lg font-bold text-white flex items-center gap-2.5 border-b border-white/10 pb-4">
+          <h2 className="text-lg font-bold text-white flex items-center gap-2.5 border-b border-white/10 pb-4">
             <span className="w-6 h-6 rounded-full bg-amber-400/10 text-amber-400 text-xs flex items-center justify-center font-bold border border-amber-400/30">
               1
             </span>
@@ -181,7 +181,7 @@ export default function CheckoutForm() {
 
         {/* Payment Method */}
         <div className="bg-zinc-900/60 backdrop-blur-md rounded-3xl border border-white/10 p-6 sm:p-7 shadow-xl space-y-5">
-          <h2 className="font-serif text-lg font-bold text-white flex items-center gap-2.5 border-b border-white/10 pb-4">
+          <h2 className="text-lg font-bold text-white flex items-center gap-2.5 border-b border-white/10 pb-4">
             <span className="w-6 h-6 rounded-full bg-amber-400/10 text-amber-400 text-xs flex items-center justify-center font-bold border border-amber-400/30">
               2
             </span>
@@ -273,7 +273,7 @@ export default function CheckoutForm() {
       {/* Review & Place Order Sidebar */}
       <div className="lg:col-span-5 space-y-6">
         <div className="bg-zinc-900/60 backdrop-blur-md rounded-3xl border border-white/10 p-6 sm:p-7 shadow-2xl sticky top-28 space-y-6">
-          <h3 className="font-serif text-lg font-bold text-white pb-4 border-b border-white/10">
+          <h3 className="text-lg font-bold text-white pb-4 border-b border-white/10">
             Acquisition Review ({items.length} pieces)
           </h3>
 
@@ -291,7 +291,7 @@ export default function CheckoutForm() {
                   />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="text-xs font-serif font-bold text-white truncate">
+                  <h4 className="text-xs font-bold text-white truncate">
                     {product.name}
                   </h4>
                   <span className="text-[11px] text-zinc-400 font-mono">
@@ -322,7 +322,7 @@ export default function CheckoutForm() {
               <span className="font-bold font-mono text-white">${tax.toFixed(2)}</span>
             </div>
             <div className="pt-4 border-t border-white/10 flex justify-between items-baseline">
-              <span className="font-serif text-sm font-bold text-white">Total Investment</span>
+              <span className="text-sm font-bold text-white">Total Investment</span>
               <span className="text-2xl font-bold font-mono text-amber-400">
                 ${total.toFixed(2)}
               </span>

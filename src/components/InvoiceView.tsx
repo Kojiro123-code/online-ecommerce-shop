@@ -49,7 +49,7 @@ export default function InvoiceView({ order }: { order: Order }) {
             <CheckCircle2 className="w-7 h-7" />
           </div>
           <div>
-            <h1 className="font-serif text-xl font-bold text-white tracking-tight">
+            <h1 className="text-xl font-bold text-white tracking-tight">
               Acquisition Confirmed & HTML Deed Generated
             </h1>
             <p className="text-xs text-zinc-400 mt-0.5 font-light">

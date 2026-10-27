@@ -18,7 +18,7 @@ export default function HomePage() {
           <span className="text-[11px] font-extrabold uppercase tracking-[0.3em] text-amber-400">
             MAISON EXCELLENCE
           </span>
-          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             The Atelier Standard
           </h3>
           <p className="text-xs sm:text-sm text-zinc-400 font-light">
@@ -33,7 +33,7 @@ export default function HomePage() {
               <Truck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-serif font-bold text-white">White-Glove Courier</h4>
+              <h4 className="text-sm font-bold text-white">White-Glove Courier</h4>
               <p className="text-xs text-zinc-400 mt-1 font-light leading-relaxed">
                 Complimentary insured express global transit with tracking.
               </p>
@@ -46,7 +46,7 @@ export default function HomePage() {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-serif font-bold text-white">Certified Provenance</h4>
+              <h4 className="text-sm font-bold text-white">Certified Provenance</h4>
               <p className="text-xs text-zinc-400 mt-1 font-light leading-relaxed">
                 Individually serialized pieces with official 3-year warranty.
               </p>
@@ -59,7 +59,7 @@ export default function HomePage() {
               <FileText className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-serif font-bold text-white">Concierge Invoicing</h4>
+              <h4 className="text-sm font-bold text-white">Concierge Invoicing</h4>
               <p className="text-xs text-zinc-400 mt-1 font-light leading-relaxed">
                 Instant verifiable HTML certificate of acquisition and deed.
               </p>
@@ -72,7 +72,7 @@ export default function HomePage() {
               <Sparkles className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-serif font-bold text-white">SSR Architecture</h4>
+              <h4 className="text-sm font-bold text-white">SSR Architecture</h4>
               <p className="text-xs text-zinc-400 mt-1 font-light leading-relaxed">
                 Server-side rendered microsecond speed for seamless curation.
               </p>
@@ -88,7 +88,7 @@ export default function HomePage() {
             <span className="text-[11px] font-extrabold uppercase tracking-[0.3em] text-amber-400">
               PERMANENT ARCHIVE
             </span>
-            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
               Curated Haute Collection
             </h2>
             <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-xl leading-relaxed">

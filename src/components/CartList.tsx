@@ -15,7 +15,7 @@ export default function CartList() {
         <div className="w-16 h-16 rounded-2xl bg-amber-400/10 text-amber-400 border border-amber-400/20 flex items-center justify-center mx-auto mb-5 shadow-[0_0_25px_rgba(245,158,11,0.15)]">
           <ShoppingBag className="w-8 h-8" />
         </div>
-        <h2 className="font-serif text-2xl font-bold text-white mb-2">Your Private Cart is Empty</h2>
+        <h2 className="text-2xl font-bold text-white mb-2">Your Private Cart is Empty</h2>
         <p className="text-xs text-zinc-400 mb-8 font-light leading-relaxed">
           You have not reserved any pieces from the archive yet. Explore our curated permanent collection of haute technology.
         </p>
@@ -97,7 +97,7 @@ export default function CartList() {
                   </span>
                   <Link
                     href={`/products/${product.id}`}
-                    className="block text-sm font-serif font-bold text-white hover:text-amber-300 transition-colors truncate"
+                    className="block text-sm font-bold text-white hover:text-amber-300 transition-colors truncate"
                   >
                     {product.name}
                   </Link>
@@ -182,7 +182,7 @@ export default function CartList() {
       {/* Order Summary Sidebar */}
       <div className="lg:col-span-4">
         <div className="bg-zinc-900/60 backdrop-blur-md rounded-3xl border border-white/10 p-6 sm:p-7 shadow-2xl sticky top-28 space-y-6">
-          <h3 className="font-serif text-xl font-bold text-white pb-4 border-b border-white/10">
+          <h3 className="text-xl font-bold text-white pb-4 border-b border-white/10">
             Acquisition Summary
           </h3>
 
@@ -202,7 +202,7 @@ export default function CartList() {
               <span className="font-bold font-mono text-white">${tax.toFixed(2)}</span>
             </div>
             <div className="pt-4 border-t border-white/10 flex justify-between items-baseline text-base">
-              <span className="font-serif font-bold text-white">Total Investment</span>
+              <span className="font-bold text-white">Total Investment</span>
               <span className="text-2xl font-bold font-mono text-amber-400">
                 ${total.toFixed(2)}
               </span>
